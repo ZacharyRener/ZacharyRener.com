@@ -1,0 +1,33 @@
+.container {
+    max-width: 1122px;
+}
+.connector {
+    position: relative;
+}
+.hasShadow {
+    box-shadow: 0px 3px 24px 0px rgb(0 0 0 / 100%);
+}
+
+.button {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.button::before {
+    content: "";
+    width: 85%;
+    height: 100%;
+    background: #48231b;
+    position: absolute;
+    left: -15%;
+    bottom: -50%;
+    z-index: -1;
+}
+.arrow {
+    margin-left: 10px;
+}

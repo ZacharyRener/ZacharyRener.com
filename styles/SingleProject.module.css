@@ -1,0 +1,27 @@
+.bodyCopy {
+    margin-bottom: 125px;
+}
+
+.projectsWrapper {
+    margin-bottom: 250px;
+}
+
+.buttonWrapper {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 225px;
+    margin-top: -80px;
+}
+
+.buttonWrapper a:nth-of-type(1) {
+    margin-right: 80px;
+}
+
+.returnHome {
+    text-align: center;
+    display: block;
+    width: 100%;
+}

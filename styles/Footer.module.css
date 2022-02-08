@@ -1,0 +1,26 @@
+.footerWrapper {
+    background: #0d0d0d;
+    color: white;
+    padding: 20px 0;
+
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    font-size: 13px;
+}
+
+.textWrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.left {
+    width: 50%;
+}
+.right {
+    text-align: right;
+    width: 50%;
+}
+.left,
+.right {
+    font-size: 11px;
+}

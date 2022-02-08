@@ -1,0 +1,91 @@
+.dotGuideWrapper {
+    position: absolute;
+    bottom: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.dotGuide {
+    background: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    position: relative;
+}
+
+.dotGuide::after {
+    content: "";
+    width: 6px;
+    height: 210px;
+    position: absolute;
+    top: calc(100% - 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #363638;
+    z-index: -1;
+}
+
+.featuredProject {
+    background: gray;
+    color: white;
+    position: relative;
+}
+
+.titleWrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.largeNumber {
+    font-size: 300px;
+    line-height: 160px;
+    width: 100%;
+    text-align: center;
+    filter: blur(4px);
+    opacity: 0.125;
+    font-weight: 500;
+}
+
+.title {
+    position: absolute;
+    top: -50px;
+    left: 135px;
+    height: 100%;
+    width: calc(100% - 135px);
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectWrapper {
+    position: relative;
+}
+
+.imageWrapper {
+    padding: 0 50px;
+    z-index: 2;
+    display: block;
+}
+
+.imageWrapper::after {
+    content: "";
+    background: #48231b;
+    width: 100vw;
+    height: 70%;
+    position: absolute;
+    left: 0;
+    top: 15%;
+    z-index: -1;
+}
+.buttonWrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 20px 0;
+    margin: 20px 0;
+    margin-bottom: 120px;
+}

@@ -1,0 +1,48 @@
+import globals from "../styles/Global.module.css";
+import styles from "../styles/FeaturedProject.module.css";
+import Link from "next/link";
+import { useState } from "react";
+
+export default function FeaturedProject(props) {
+    const number = () => {
+        if (props.hasOwnProperty("number")) {
+            return <div className={styles.largeNumber}>{props.number}</div>;
+        } else {
+            return <div className={styles.largeNumber}>01</div>;
+        }
+    };
+
+    const button = () => {
+        if (props.hasOwnProperty("link")) {
+            return (
+                <Link href={props.link}>
+                    <span className={globals.button}>
+                        View Project
+                        <i
+                            className={globals.arrow + " fas fa-arrow-right"}
+                        ></i>
+                    </span>
+                </Link>
+            );
+        }
+    };
+
+    return (
+        <section className="featuredProjectWrapper">
+            <section className={styles.featuredProject}>
+                <div className={styles.titleWrapper}>
+                    <div className={globals.connector}>
+                        {number()}
+                        <h2 className={styles.title}>{props.title}</h2>
+                    </div>
+                </div>
+            </section>
+            <section className={styles.projectWrapper}>
+                <div className={styles.imageWrapper + " container"}>
+                    <img src={props.image} className={globals.hasShadow} />
+                </div>
+            </section>
+            <div className={styles.buttonWrapper}>{button()}</div>
+        </section>
+    );
+}

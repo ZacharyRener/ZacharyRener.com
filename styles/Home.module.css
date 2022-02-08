@@ -1,6 +1,5 @@
 .mainstage {
-    height: 100vh;
-    min-height: 500px;
+    height: 800px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -8,14 +7,20 @@
     overflow: hidden;
 }
 
+.connector {
+    position: relative;
+    overflow-y: hidden;
+}
+
 .content {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 42px;
     line-height: 52px;
     letter-spacing: 15.96px;
     text-transform: uppercase;
     font-weight: 600;
     color: white;
+    text-align: center;
 }
 
 .videoWrapper {
@@ -52,6 +57,11 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(255,255,255,0.05) 100%);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 1) 10%,
+        rgba(255, 255, 255, 0.05) 100%
+    );
 }

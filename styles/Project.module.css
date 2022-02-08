@@ -1,0 +1,74 @@
+.projectWrapper {
+    position: relative;
+    margin-bottom: 150px;
+}
+
+.projectWrapper::after {
+    content: "";
+    background: #363638;
+    width: 100vw;
+    height: 56%;
+    position: absolute;
+    left: 0;
+    top: 22%;
+    z-index: -1;
+}
+
+.gray::after {
+    background: #363638;
+}
+
+.red::after {
+    background: #48231b;
+}
+
+.project {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imageSide {
+    width: 60%;
+    z-index: 2;
+}
+
+.titleSide {
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 50px;
+    align-items: center;
+    position: relative;
+}
+
+.buttonWrapper {
+    position: absolute;
+
+    bottom: 20px;
+}
+.buttonLeft {
+    left: calc(60% + 50px);
+}
+
+.buttonRight {
+    left: 65px;
+}
+
+.largeNumber {
+    font-size: 290px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: black;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.headline {
+    z-index: 2;
+}
+
+.right {
+    order: -1;
+}

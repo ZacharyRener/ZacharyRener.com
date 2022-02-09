@@ -14,9 +14,6 @@ export default function Mainstage() {
                 </div>
                 <section className={styles.videoWrapper}>
                     <video
-                        onEnded={() => {
-                            console.log("!!!! react !");
-                        }}
                         className={styles.video}
                         id="video"
                         autoPlay

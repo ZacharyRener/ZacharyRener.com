@@ -8,6 +8,12 @@
     color: white;
 }
 
+@media (max-width: 769px) {
+    .navbarWrapper .link {
+        display: none;
+    }
+}
+
 .navbarWrapper {
     padding: 50px 20px;
     max-width: 1122px;
@@ -24,6 +30,24 @@
     font-weight: 600;
     margin-right: 50px;
     cursor: pointer;
+    transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+.link {
+    position: relative;
+}
+.link::after {
+    transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+    content: "";
+    width: 0;
+    height: 2px;
+    background: white;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.link:hover::after {
+    width: 100%;
 }
 
 .cta {
@@ -39,6 +63,11 @@
     left: -25%;
     bottom: -25%;
     z-index: -1;
+    transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.cta:hover::before {
+    left: -10%;
 }
 
 .wrapper {
@@ -60,4 +89,47 @@
 
 .logo {
     font-size: 40px;
+}
+
+@media (min-width: 770px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+.hamburger {
+    border-bottom: 3px solid white;
+    width: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.hamburger::before,
+.hamburger::after {
+    cursor: pointer;
+    content: "";
+    width: 30px;
+    height: 3px;
+    background: white;
+    position: absolute;
+    left: 0;
+}
+
+.hamburger::before {
+    top: -7px;
+}
+
+.hamburger::after {
+    top: 7px;
+}
+
+.hamburgerWrapper {
+    cursor: pointer;
+}
+
+.mobileLink {
+    color: white;
+    display: block;
+    margin-bottom: 50px;
+    font-size: 25px;
 }

@@ -1,5 +1,6 @@
 import globals from "../styles/Global.module.css";
 import styles from "../styles/SeoCopy.module.css";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function SEOCopy(props) {
@@ -35,9 +36,12 @@ export default function SEOCopy(props) {
                 </div>
             </div>
             <div className={styles.buttonWrapper}>
-                <a href="/" className={globals.button}>
-                    Contact Me
-                </a>
+                <Link href="/contact">
+                    <a className={globals.button}>
+                        Contact Me
+                        <i className={globals.arrow + " fas fa-arrow-right"} />
+                    </a>
+                </Link>
             </div>
         </section>
     );

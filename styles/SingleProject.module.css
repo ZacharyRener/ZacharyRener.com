@@ -15,6 +15,17 @@
     margin-bottom: 225px;
     margin-top: -80px;
 }
+@media (max-width: 769px) {
+    .buttonWrapper {
+        justify-content: flex-start;
+        text-align: left;
+        margin-left: 30px;
+        margin-top: 0px;
+    }
+    .buttonWrapper a {
+        margin-bottom: 30px;
+    }
+}
 
 .buttonWrapper a:nth-of-type(1) {
     margin-right: 80px;

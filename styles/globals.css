@@ -104,3 +104,55 @@ button {
     font-family: "Montserrat", sans-serif;
     margin-top: 20px;
 }
+
+form::after {
+    content: "";
+    background: #48231b;
+    width: 100vw;
+    height: 60%;
+    position: absolute;
+    left: 0;
+    top: 15%;
+    z-index: -1;
+}
+
+form {
+    position: relative;
+    margin-top: 90px;
+}
+
+form::before {
+    content: "";
+    background: #48231b;
+    width: 100vw;
+    height: 60%;
+    position: absolute;
+    right: 0;
+    top: 15%;
+    z-index: -1;
+}
+
+.mobileMenu {
+    height: 100vh;
+    width: 80vw;
+    right: 0;
+    z-index: 100;
+    position: fixed;
+    background: black;
+    transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-right: 50px;
+    padding-top: 200px;
+}
+
+.mobileMenu:not(.active) {
+    right: -80vw;
+}
+
+@media (min-width: 770px) {
+    .mobileMenu {
+        display: none;
+    }
+}

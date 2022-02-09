@@ -5,6 +5,7 @@ import { useState } from "react";
 export default function GuideDot() {
     return (
         <section className={styles.dotGuideWrapper}>
+            <div className={styles.guideLabel}>My Work</div>
             <div className={styles.dotGuide}></div>
         </section>
     );

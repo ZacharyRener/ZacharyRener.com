@@ -10,7 +10,9 @@ export default function HeaderImage(props) {
                 className={homeStyles.mainstage + " " + styles.headerImage}
             >
                 <div className="container">
-                    <section className={homeStyles.content}>
+                    <section
+                        className={homeStyles.content + " " + styles.pageTitle}
+                    >
                         <div>{props.title}</div>
                     </section>
                 </div>

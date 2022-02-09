@@ -1,7 +1,7 @@
 import globals from "../styles/Global.module.css";
 import styles from "../styles/Project.module.css";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Project(props) {
     const titleOrientation = () => {
@@ -26,6 +26,16 @@ export default function Project(props) {
         }
     };
 
+    const [leftClass, setLeftClass] = useState("");
+
+    useEffect(() => {
+        if (props.hasOwnProperty("orientation")) {
+            if (props.orientation == "left") {
+                setLeftClass("container relative");
+            }
+        }
+    });
+
     const button = () => {
         if (props.hasOwnProperty("link")) {
             return (
@@ -47,13 +57,26 @@ export default function Project(props) {
         }
     };
 
+    const image = () => {
+        if (props.hasOwnProperty("link")) {
+            return (
+                <Link href={props.link}>
+                    <img
+                        className={globals.hasShadow + " " + globals.hasPointer}
+                        src={props.image}
+                    />
+                </Link>
+            );
+        } else {
+            return <img className={globals.hasShadow} src={props.image} />;
+        }
+    };
+
     return (
         <div className={styles.projectWrapper + " " + projectColor()}>
             <div className="container">
                 <section className={styles.project}>
-                    <div className={styles.imageSide}>
-                        <img className={globals.hasShadow} src={props.image} />
-                    </div>
+                    <div className={styles.imageSide}>{image()}</div>
                     <div
                         className={styles.titleSide + " " + titleOrientation()}
                     >
@@ -67,7 +90,7 @@ export default function Project(props) {
                     props.orientation == "right" ? "container relative" : ""
                 }
             ></div>
-            {button()}
+            <div className="container relative">{button()}</div>
         </div>
     );
 }

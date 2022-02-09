@@ -12,6 +12,11 @@
     width: 50%;
     padding-right: 50px;
 }
+@media (max-width: 768px) {
+    .left {
+        padding-right: 0;
+    }
+}
 
 .right {
     width: 50%;
@@ -31,4 +36,14 @@
     max-width: 50%;
     margin: 0 auto;
     margin-bottom: 50px;
+}
+
+@media (max-width: 769px) {
+    .seoH1 {
+        max-width: 100%;
+    }
+    .left,
+    .right {
+        width: 100%;
+    }
 }

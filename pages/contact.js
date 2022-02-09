@@ -8,11 +8,18 @@ import globals from "../styles/Global.module.css";
 export default function Contact() {
     const handleSubmission = (e) => {
         e.preventDefault();
-        console.log(e.target.first_name.value);
+        const firstName = e.target.first_name.value;
+        const lastName = e.target.last_name.value;
+        const email = e.target.email.value;
+        const comments = e.target.comments.value;
+        console.log(firstName);
+        console.log(lastName);
+        console.log(email);
+        console.log(comments);
     };
 
     return (
-        <div>
+        <div className={globals.noOverflow}>
             <Head />
             <Navbar />
             <HeaderImage title="Contact" />
@@ -24,38 +31,41 @@ export default function Contact() {
                     non enim. Et pharetra pharetra massa massa ultricies mi quis
                     hendrerit. Id nibh tortor id aliquet lectus proin.
                     Suspendisse ultrices gravida dictum fusce.
-                    <form onSubmit={handleSubmission}>
-                        <input
-                            id="first_name"
-                            type="text"
-                            placeholder="First Name"
-                            required
-                        />
-                        <input
-                            id="last_name"
-                            type="text"
-                            placeholder="Last Name"
-                            required
-                        />
-                        <input
-                            id="email"
-                            type="email"
-                            placeholder="Email"
-                            required
-                        />
-                        <textarea
-                            rows="10"
-                            id="comments"
-                            placeholder="Comments"
-                        ></textarea>
-                        <button
-                            className={globals.button + " " + styles.button}
-                            type="submit"
-                        >
-                            Contact
-                        </button>
-                    </form>
                 </p>
+                <form
+                    onSubmit={handleSubmission}
+                    className={globals.childHasShadow}
+                >
+                    <input
+                        id="first_name"
+                        type="text"
+                        placeholder="First Name"
+                        required
+                    />
+                    <input
+                        id="last_name"
+                        type="text"
+                        placeholder="Last Name"
+                        required
+                    />
+                    <input
+                        id="email"
+                        type="email"
+                        placeholder="Email"
+                        required
+                    />
+                    <textarea
+                        rows="10"
+                        id="comments"
+                        placeholder="Comments"
+                    ></textarea>
+                    <button
+                        className={globals.button + " " + styles.button}
+                        type="submit"
+                    >
+                        Contact
+                    </button>
+                </form>
             </section>
 
             <Footer />

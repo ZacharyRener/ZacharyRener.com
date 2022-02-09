@@ -7,6 +7,13 @@
     overflow: hidden;
 }
 
+@media (max-width: 769px) {
+    .mainstage {
+        min-height: 700px;
+        height: 100vh;
+    }
+}
+
 .connector {
     position: relative;
     overflow-y: hidden;

@@ -27,6 +27,21 @@ export default function FeaturedProject(props) {
         }
     };
 
+    const image = () => {
+        if (props.hasOwnProperty("link")) {
+            return (
+                <Link href={props.link}>
+                    <img
+                        src={props.image}
+                        className={globals.hasShadow + " " + globals.hasPointer}
+                    />
+                </Link>
+            );
+        } else {
+            return <img src={props.image} className={globals.hasShadow} />;
+        }
+    };
+
     return (
         <section className="featuredProjectWrapper">
             <section className={styles.featuredProject}>
@@ -39,7 +54,7 @@ export default function FeaturedProject(props) {
             </section>
             <section className={styles.projectWrapper}>
                 <div className={styles.imageWrapper + " container"}>
-                    <img src={props.image} className={globals.hasShadow} />
+                    {image()}
                 </div>
             </section>
             <div className={styles.buttonWrapper}>{button()}</div>

@@ -6,10 +6,11 @@ import FeaturedProject from "../components/featured-project";
 import Project from "../components/project";
 import SEOCopy from "../components/seo-copy";
 import Footer from "../components/footer";
+import globals from "../styles/Global.module.css";
 
 export default function Home() {
     return (
-        <div className={styles.container}>
+        <div className={styles.container + " " + globals.noOverflow}>
             <Head />
             <Navbar />
             <Mainstage />

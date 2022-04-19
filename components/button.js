@@ -1,7 +1,4 @@
 import globals from "../styles/Global.module.css";
-import styles from "../styles/FeaturedProject.module.css";
-import Link from "next/link";
-import { useState } from "react";
 
 export default function Button(props) {
     return (

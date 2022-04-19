@@ -9,8 +9,13 @@ export default function Mainstage() {
             <section id="mainstage" className={styles.mainstage}>
                 <div className="container">
                     <section className={styles.content}>
-                        <div>Lorem Ipsum</div>
+                        <div>
+                            Hi. I'm Zach,
+                            <br />A Full-Stack
+                            <br /> Web Developer
+                        </div>
                     </section>
+                    <div className={styles.captionWrapper}></div>
                 </div>
                 <section className={styles.videoWrapper}>
                     <video

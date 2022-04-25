@@ -24,13 +24,10 @@ export default function Contact() {
             <Navbar />
             <HeaderImage title="Contact" />
             <section className={styles.bodyCopy + " container"}>
+                <h1>Want to start a project?</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Magna fringilla urna porttitor rhoncus dolor purus
-                    non enim. Et pharetra pharetra massa massa ultricies mi quis
-                    hendrerit. Id nibh tortor id aliquet lectus proin.
-                    Suspendisse ultrices gravida dictum fusce.
+                    Fill out the form below, and i'll be in contact with you as
+                    soon as I can
                 </p>
                 <form
                     onSubmit={handleSubmission}

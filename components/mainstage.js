@@ -11,8 +11,7 @@ export default function Mainstage() {
                     <section className={styles.content}>
                         <div>
                             Hi. I'm Zach,
-                            <br />A Full-Stack
-                            <br /> Web Developer
+                            <br />A Software Engineer
                         </div>
                     </section>
                     <div className={styles.captionWrapper}></div>

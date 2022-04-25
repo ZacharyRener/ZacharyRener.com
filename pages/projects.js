@@ -29,17 +29,7 @@ export default function Projects() {
         <div className={singleProjectStyles.singleProjectWrapper}>
             <Head />
             <Navbar />
-            <HeaderImage title="Projects" />
-            <section className={" container " + styles.bodyCopy}>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Magna fringilla urna porttitor rhoncus dolor purus
-                    non enim. Et pharetra pharetra massa massa ultricies mi quis
-                    hendrerit. Id nibh tortor id aliquet lectus proin.
-                    Suspendisse ultrices gravida dictum fusce.
-                </p>
-            </section>
+            <HeaderImage title="All Projects" />
 
             <section className={singleProjectStyles.projectsWrapper}>
                 {Object.values(projects).map((project, index) => {

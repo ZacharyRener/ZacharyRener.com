@@ -20,6 +20,7 @@ export default function SingleProject() {
     const [projectExists, setProjectExists] = useState(false);
 
     const [title, setTitle] = useState("Project Not Found");
+    const [stepOne, setStepOne] = useState("Website Development");
     const [content, setContent] = useState(
         <span className={styles.returnHome}>
             <Link href="/">Return Home</Link>
@@ -31,11 +32,13 @@ export default function SingleProject() {
     const [steps, setSteps] = useState([]);
     const [codeLink, setCodeLink] = useState("");
     const [siteLink, setSiteLink] = useState("");
+    const [finalText, setFinalText] = useState("");
 
     useEffect(() => {
         if (data.hasOwnProperty(slug)) {
             const post = data[slug];
             setTitle(post.title);
+            setStepOne(post.stepOne);
             setContent(post.content);
             setFeaturedImage(post.featuredImage);
             setImages(post.images);
@@ -44,10 +47,17 @@ export default function SingleProject() {
             setCodeLink(post.codeLink);
             setSiteLink(post.siteLink);
             setProjectExists(true);
+            setFinalText(post.finalText);
         } else {
             console.log("doesnt have own property");
         }
     });
+
+    const viewCodeButton = () => {
+        if (codeLink != false) {
+            return <Button title="View Code" link={codeLink} target="_blank" />;
+        }
+    };
 
     if (projectExists) {
         return (
@@ -63,13 +73,7 @@ export default function SingleProject() {
                     <p>{content}</p>
                 </section>
                 <FeaturedProject
-                    title={
-                        <span>
-                            Website
-                            <br />
-                            Development
-                        </span>
-                    }
+                    title={<span>{stepOne}</span>}
                     image={featuredImage}
                     number="01."
                 />
@@ -88,12 +92,12 @@ export default function SingleProject() {
                     })}
                 </section>
                 <FeaturedProject
-                    title={<span>Launch</span>}
+                    title={finalText}
                     image={finalImage}
                     number={"0" + (steps.length + 2) + "."}
                 />
                 <section className={styles.buttonWrapper}>
-                    <Button title="View Code" link={codeLink} target="_blank" />
+                    {viewCodeButton()}
                     <Button
                         title="View Live Site"
                         link={siteLink}

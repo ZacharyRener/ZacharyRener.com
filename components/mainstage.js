@@ -10,7 +10,7 @@ export default function Mainstage() {
         <div className="container">
           <section className={styles.content}>
             <div>
-              Hi. I'm Zach,
+              Hi. I&apos;m Zach,
               <br />A Full-Stack Developer
             </div>
           </section>

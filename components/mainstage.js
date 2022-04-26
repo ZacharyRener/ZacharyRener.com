@@ -17,7 +17,14 @@ export default function Mainstage() {
           <div className={styles.captionWrapper}></div>
         </div>
         <section className={styles.videoWrapper}>
-          <video className={styles.video} id="video" autoPlay muted loop>
+          <video
+            className={styles.video}
+            id="video"
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
             <source src="/output.mp4" type="video/mp4" />
           </video>
           <div className={styles.controlSpace}></div>

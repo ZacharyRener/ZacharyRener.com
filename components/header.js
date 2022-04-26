@@ -4,6 +4,7 @@ import Script from "next/script";
 export default function Header() {
   return (
     <Head>
+      <meta name="theme-color" content="#000" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
       <link

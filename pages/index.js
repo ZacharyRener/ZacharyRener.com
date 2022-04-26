@@ -47,7 +47,7 @@ export default function Home() {
         title={<span>Spire</span>}
         number="04."
         image="/Spire/Homepage.jpg"
-        link="/projects/gcf"
+        link="/projects/spire"
       />
       <Project
         orientation="right"

@@ -15,39 +15,35 @@ import styles from "../styles/projects.module.css";
 import data from "../data/projects";
 
 export default function Projects() {
-    const [projects, setProjects] = useState({});
+  const [projects, setProjects] = useState({});
 
-    useEffect(() => {
-        if (data.hasOwnProperty("shr")) {
-            setProjects(data);
-            console.log("data:", data);
-            console.log("data values:", Object.values(data));
-        }
-    });
+  useEffect(() => {
+    setProjects(data);
+  });
 
-    return (
-        <div className={singleProjectStyles.singleProjectWrapper}>
-            <Head />
-            <Navbar />
-            <HeaderImage title="All Projects" />
+  return (
+    <div className={singleProjectStyles.singleProjectWrapper}>
+      <Head />
+      <Navbar />
+      <HeaderImage title="Projects" />
 
-            <section className={singleProjectStyles.projectsWrapper}>
-                {Object.values(projects).map((project, index) => {
-                    return (
-                        <Project
-                            key={index}
-                            orientation={index % 2 == 0 ? "left" : "right"}
-                            color={index % 2 == 0 ? "red" : "gray"}
-                            title={project.title}
-                            number={`0${index + 1}.`}
-                            image={project.featuredImage}
-                            link={project.link}
-                        />
-                    );
-                })}
-            </section>
+      <section className={singleProjectStyles.projectsWrapper}>
+        {Object.values(projects).map((project, index) => {
+          return (
+            <Project
+              key={index}
+              orientation={index % 2 == 0 ? "left" : "right"}
+              color={index % 2 == 0 ? "red" : "gray"}
+              title={project.title}
+              number={`0${index + 1}.`}
+              image={project.featuredImage}
+              link={project.link}
+            />
+          );
+        })}
+      </section>
 
-            <Footer />
-        </div>
-    );
+      <Footer />
+    </div>
+  );
 }

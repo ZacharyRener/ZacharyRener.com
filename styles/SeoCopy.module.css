@@ -1,49 +1,53 @@
 .SEOCopy {
-    color: white;
-    padding-bottom: 200px;
+  color: white;
+  padding-bottom: 200px;
 }
 
 .contentWrapper {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .left {
-    width: 50%;
-    padding-right: 50px;
+  width: 50%;
+  padding-right: 50px;
 }
 @media (max-width: 768px) {
-    .left {
-        padding-right: 0;
-    }
+  .left {
+    padding-right: 0;
+  }
 }
 
 .right {
-    width: 50%;
+  width: 50%;
 }
 
 .buttonWrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
 }
 
 .seoH1 {
-    font-size: 35px;
-    text-transform: uppercase;
-    letter-spacing: 15px;
-    font-weight: 600;
-    max-width: 50%;
-    margin: 0 auto;
-    margin-bottom: 50px;
+  font-size: 35px;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  font-weight: 600;
+  max-width: 50%;
+  margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 @media (max-width: 769px) {
-    .seoH1 {
-        max-width: 100%;
-    }
-    .left,
-    .right {
-        width: 100%;
-    }
+  .seoH1 {
+    max-width: 100%;
+  }
+  .left,
+  .right {
+    width: 100%;
+  }
+}
+
+.p {
+  text-align: center;
 }

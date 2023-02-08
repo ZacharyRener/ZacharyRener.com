@@ -43,7 +43,7 @@ export default function Project(props) {
                     <div
                         className={styles.buttonWrapper + " " + buttonOrientation()}
                     >
-                        <a href={props.link} target="_blank">
+                        <a href={props.link} target="_blank" rel="noreferrer">
                             <a className={globals.button}>
                                 View Project
                                 <i
@@ -79,7 +79,7 @@ export default function Project(props) {
         if (props.hasOwnProperty("link")) {
             if (props.hasOwnProperty("external") && props.external == true) {
                 return (
-                    <a target="_blank" href={props.link}>
+                    <a target="_blank" rel="noreferrer" href={props.link}>
                         <img
                             className={globals.hasShadow + " " + globals.hasPointer + " " + styles.projectImage}
                             src={props.image}

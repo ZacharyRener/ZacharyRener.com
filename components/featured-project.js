@@ -16,7 +16,7 @@ export default function FeaturedProject(props) {
         if (props.hasOwnProperty("link")) {
             if(props.hasOwnProperty("external") && props.external == true){
                 return (
-                    <a target="_blank" href={props.link}>
+                    <a target="_blank" rel="noreferrer" href={props.link}>
                         <span className={globals.button}>
                             View Project
                             <i
@@ -43,7 +43,7 @@ export default function FeaturedProject(props) {
         if (props.hasOwnProperty("link")) {
             if(props.hasOwnProperty("external") && props.external == true){
                 return (
-                    <a target="_blank" href={props.link}>
+                    <a target="_blank" rel="noreferrer" href={props.link}>
                         <img
                             src={props.image}
                             className={globals.hasShadow + " " + globals.hasPointer}

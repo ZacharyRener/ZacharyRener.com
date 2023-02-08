@@ -47,10 +47,10 @@ export default function Navbar() {
               </Link>
             </div>
             <div className={ styles.right }>
-              <a href="https://github.com/ZacharyRener" target="_blank">
+              <a href="https://github.com/ZacharyRener" target="_blank" rel="noreferrer">
                 <span className={ styles.link }>GitHub</span>
               </a>
-              <a href="https://docs.google.com/document/d/1TIZ4wakhXfRBrbQAm_x_dapY2KwqyK7dH9bMZ-bk4Nw/edit?usp=sharing" target="_blank">
+              <a href="https://docs.google.com/document/d/1TIZ4wakhXfRBrbQAm_x_dapY2KwqyK7dH9bMZ-bk4Nw/edit?usp=sharing" target="_blank" rel="noreferrer">
                 <span className={ styles.link }>Resume</span>
               </a>
               <Link href="/contact">

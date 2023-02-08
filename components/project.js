@@ -38,6 +38,24 @@ export default function Project(props) {
 
     const button = () => {
         if (props.hasOwnProperty("link")) {
+            if (props.hasOwnProperty("external") && props.external == true) {   
+                return (
+                    <div
+                        className={styles.buttonWrapper + " " + buttonOrientation()}
+                    >
+                        <a href={props.link} target="_blank">
+                            <a className={globals.button}>
+                                View Project
+                                <i
+                                    className={
+                                        globals.arrow + " fas fa-arrow-right"
+                                    }
+                                ></i>
+                            </a>
+                        </a>
+                    </div>
+                );
+            }
             return (
                 <div
                     className={styles.buttonWrapper + " " + buttonOrientation()}
@@ -59,10 +77,20 @@ export default function Project(props) {
 
     const image = () => {
         if (props.hasOwnProperty("link")) {
+            if (props.hasOwnProperty("external") && props.external == true) {
+                return (
+                    <a target="_blank" href={props.link}>
+                        <img
+                            className={globals.hasShadow + " " + globals.hasPointer + " " + styles.projectImage}
+                            src={props.image}
+                        />
+                    </a>
+                );
+            }
             return (
                 <Link href={props.link}>
                     <img
-                        className={globals.hasShadow + " " + globals.hasPointer}
+                        className={globals.hasShadow + " " + globals.hasPointer + " " + styles.projectImage}
                         src={props.image}
                     />
                 </Link>

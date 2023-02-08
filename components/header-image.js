@@ -6,6 +6,7 @@ import styles from "../styles/HeaderImage.module.css";
 export default function HeaderImage(props) {
   return (
     <div className={globals.connector}>
+      <div className={globals.mainstageOverlay}></div>
       <section className={homeStyles.mainstage + " " + styles.headerImage}>
         <div className="container">
           <section className={homeStyles.content + " " + styles.pageTitle}>

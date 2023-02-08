@@ -107,7 +107,7 @@ button {
 
 form::after {
   content: "";
-  background: #48231b;
+  background: #530d1e;
   width: 100vw;
   height: 60%;
   position: absolute;
@@ -123,7 +123,7 @@ form {
 
 form::before {
   content: "";
-  background: #48231b;
+  background: #530d1e;
   width: 100vw;
   height: 60%;
   position: absolute;

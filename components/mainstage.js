@@ -6,12 +6,13 @@ import GuideDot from "../components/guide-dot";
 export default function Mainstage() {
   return (
     <div className={globals.connector}>
+      <div className={globals.mainstageOverlay}></div>
       <section id="mainstage" className={styles.mainstage}>
         <div className="container">
           <section className={styles.content}>
             <div>
               Hi. I&apos;m Zach,
-              <br />A Full-Stack Developer
+              <br />A Software-Engineer
             </div>
           </section>
           <div className={styles.captionWrapper}></div>

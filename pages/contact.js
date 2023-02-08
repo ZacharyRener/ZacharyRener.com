@@ -18,17 +18,8 @@ export default function Contact() {
     console.log(comments);
   };
 
-  return (
-    <div className={globals.noOverflow}>
-      <Head />
-      <Navbar />
-      <HeaderImage title="Contact" />
-      <section className={styles.bodyCopy + " container"}>
-        <h1>Want to start a project?</h1>
-        <p>
-          Fill out the form below, and i&apos;ll be in contact with you as soon
-          as I can
-        </p>
+  const form = () => {
+    return (
         <form onSubmit={handleSubmission} className={globals.childHasShadow}>
           <input
             id="first_name"
@@ -46,6 +37,19 @@ export default function Contact() {
             Contact
           </button>
         </form>
+    );
+  }
+
+  return (
+    <div className={globals.noOverflow}>
+      <Head />
+      <Navbar />
+      <HeaderImage title="Contact" />
+      <section className={styles.bodyCopy + " container"}>
+        <h1>Want to start a project?</h1>
+        <p>
+          You can contact me at <a href='mailto:zacharyrener@gmail.com'>zacharyrener@gmail.com</a>
+        </p>
       </section>
 
       <Footer />

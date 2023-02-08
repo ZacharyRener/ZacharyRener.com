@@ -14,6 +14,18 @@ export default function FeaturedProject(props) {
 
     const button = () => {
         if (props.hasOwnProperty("link")) {
+            if(props.hasOwnProperty("external") && props.external == true){
+                return (
+                    <a target="_blank" href={props.link}>
+                        <span className={globals.button}>
+                            View Project
+                            <i
+                                className={globals.arrow + " fas fa-arrow-right"}
+                            ></i>
+                        </span>
+                    </a>
+                );
+            } 
             return (
                 <Link href={props.link}>
                     <span className={globals.button}>
@@ -29,6 +41,16 @@ export default function FeaturedProject(props) {
 
     const image = () => {
         if (props.hasOwnProperty("link")) {
+            if(props.hasOwnProperty("external") && props.external == true){
+                return (
+                    <a target="_blank" href={props.link}>
+                        <img
+                            src={props.image}
+                            className={globals.hasShadow + " " + globals.hasPointer}
+                        />
+                    </a>
+                );
+            }
             return (
                 <Link href={props.link}>
                     <img

@@ -27,6 +27,7 @@ export default function SingleProject() {
         </span>
     );
     const [featuredImage, setFeaturedImage] = useState("Loading");
+    const [detailUrl, setDetailUrl] = useState("");
     const [images, setImages] = useState([]);
     const [finalImage, setFinalImage] = useState("");
     const [steps, setSteps] = useState([]);
@@ -48,6 +49,7 @@ export default function SingleProject() {
             setSiteLink(post.siteLink);
             setProjectExists(true);
             setFinalText(post.finalText);
+            setDetailUrl(post.detailUrl);
         } else {
             console.log("doesnt have own property");
         }
@@ -76,17 +78,21 @@ export default function SingleProject() {
                     title={<span>{stepOne}</span>}
                     image={featuredImage}
                     number="01."
+                    link={detailUrl}
+                    external={true}
                 />
                 <section className={styles.projectsWrapper}>
                     {steps.map((step, index) => {
                         return (
                             <Project
                                 key={index}
-                                orientation={index % 2 == 0 ? "left" : "right"}
-                                color={index % 2 == 0 ? "gray" : "red"}
+                                orientation={index % 2 != 0 ? "left" : "right"}
+                                color={index % 2 == 0 ? "red" : "red"}
                                 title={step.title}
                                 number={`0${index + 2}.`}
                                 image={step.image}
+                                link={step.link}
+                                external={step.external}
                             />
                         );
                     })}

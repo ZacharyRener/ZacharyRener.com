@@ -97,7 +97,7 @@
 
 .imageWrapper::after {
     content: "";
-    background: #48231b;
+    background: #530d1e;
     width: 100%;
     height: 70%;
     position: absolute;

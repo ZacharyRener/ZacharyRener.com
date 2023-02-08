@@ -14,47 +14,34 @@ export default function Home() {
       <Navbar />
       <Mainstage />
       <FeaturedProject
-        title={
-          <span>
-            Strive
-            <br />
-            Consulting
-          </span>
+        title={ <span>React - Next.js, useState, useEffect, components</span>
         }
-        image="/Strive/Homepage.jpg"
-        link="/projects/strive"
+        image="/PortfolioSite/portfolio-cover.png"
+        link="/projects/portfolio"
       />
       <Project
-        orientation="left"
-        color="gray"
-        title={ <span>Trip Tiger</span> }
+        orientation="right"
+        color="red"
+        title={ <span>PHP/Laravel - MVC, Controllers, Views</span> }
         number="02."
-        image="/TripTiger/TT_Homepage.jpg"
-        link="/projects/triptiger"
-      />
-      <Project
-        orientation="right"
-        color="red"
-        title={ <span>Heller</span> }
-        number="03."
-        image="/Heller/Heller_Homepage.jpg"
-        link="/projects/heller"
+        image="/VMG/vmg-cover.png"
+        link="/projects/vmg"
       />
       <Project
         orientation="left"
-        color="gray"
-        title={ <span>Spire</span> }
-        number="04."
-        image="/Spire/Homepage.jpg"
-        link="/projects/spire"
+        color="red"
+        title={ <span>WordPress - Hooks, ACF, Gutenberg, JS, SCSS</span> }
+        number="03."
+        image="/domaintools/domain_tools_cover.png"
+        link="/projects/domaintools"
       />
       <Project
         orientation="right"
         color="red"
-        title={ <span>VMG Health</span> }
-        number="05."
-        image="/VMG/Homepage.jpg"
-        link="/projects/vmg"
+        title={ <span>WordPress - Registering Style, Parent / Child Theme, Hooks</span> }
+        number="04."
+        image="/nightdragon/nightdragon_cover.png"
+        link="/projects/nightdragon"
       />
       <Footer />
     </div>

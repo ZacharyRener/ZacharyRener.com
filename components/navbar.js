@@ -9,7 +9,7 @@ export default function Navbar() {
   const [ mobileMenuClass, setMobileMenuClass ] = useState( "" );
 
   useEffect( () => {
-    window.addEventListener( "scroll", e => {
+    window.addEventListener( "scroll", () => {
       if ( window.scrollY > 0 ) {
         setScrolled( "scrolled" );
       } else {

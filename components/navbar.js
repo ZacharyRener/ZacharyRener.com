@@ -18,7 +18,7 @@ export default function Navbar() {
     });
   });
 
-  const toggleMobileMenu = e => {
+  const toggleMobileMenu = () => {
     if ( mobileMenuClass == "active" ) {
       setMobileMenuClass( "" );
     } else {

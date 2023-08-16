@@ -57,15 +57,22 @@
 
 .title {
     position: absolute;
-    top: -50px;
+    bottom: 25px;
     left: calc(50% + 150px);
     width: calc(50% - 150px);
     transform: translateX(-50%);
-    height: 100%;
+    height: auto;
     text-align: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+.title > * {
+    width: 100%;
+    text-align: left;
+    display: block;
+}
+
+.title h2,
+.title p {
+    margin: 0;
 }
 
 @media (max-width: 769px) {
@@ -87,6 +94,15 @@
     padding: 0 50px;
     z-index: 2;
     display: block;
+    border-radius: 10px;
+}
+.imageWrapper img {
+    border-radius: 10px;
+}
+
+.imageWrapper > div {
+    border-radius: 10px;
+    box-shadow: 0px 3px 24px 0px rgb(0 0 0 / 100%);
 }
 
 @media (max-width: 769px) {

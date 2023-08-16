@@ -78,9 +78,13 @@
 .mainstageOverlay {
     height: 100%;
     width: 100%;
-    background: linear-gradient(90deg, rgba(83,13,30,0) 0%, rgba(83,13,30,0.75) 100%);
+    background: linear-gradient(
+        90deg,
+        rgba(83, 13, 30, 0) 0%,
+        rgba(83, 13, 30, 0.75) 100%
+    );
     position: absolute;
     top: 0;
     left: 0;
-    filter:blur(100px);
+    filter: blur(100px);
 }

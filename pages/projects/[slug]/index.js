@@ -12,6 +12,7 @@ import Project from "../../../components/project";
 import Button from "../../../components/button";
 import Link from "next/link";
 import data from "../../../data/projects";
+import Tag from "../../../components/tag";
 
 export default function SingleProject() {
     const router = useRouter();
@@ -34,6 +35,20 @@ export default function SingleProject() {
     const [codeLink, setCodeLink] = useState("");
     const [siteLink, setSiteLink] = useState("");
     const [finalText, setFinalText] = useState("");
+    const [image2, setImage2] = useState("");
+    const [compPosition, setCompPosition] = useState("");
+    const [excerpt, setExcerpt] = useState("");
+    const [tags, setTags] = useState("");
+    const [ftr_image2, ftr_setImage2] = useState("");
+    const [ftr_compPosition, ftr_setCompPosition] = useState("");
+    const [ftr_excerpt, ftr_setExcerpt] = useState("");
+    const [ftr_tags, ftr_setTags] = useState("");
+    const [final_image2, final_setImage2] = useState("");
+    const [final_compPosition, final_setCompPosition] = useState("");
+    const [final_excerpt, final_setExcerpt] = useState("");
+    const [final_tags, final_setTags] = useState("");
+    const [ftr_btnText, ftr_setBtnText] = useState("View Project");
+    const [final_btnText, final_setBtnText] = useState("View Project");
 
     useEffect(() => {
         if (data.hasOwnProperty(slug)) {
@@ -50,6 +65,18 @@ export default function SingleProject() {
             setProjectExists(true);
             setFinalText(post.finalText);
             setDetailUrl(post.detailUrl);
+            setImage2(post.image2);
+            setCompPosition(post.compPosition);
+            ftr_setImage2(post.featuredImage2);
+            ftr_setCompPosition(post.featuredCompPosition);
+            ftr_setExcerpt(post.featuredExcerpt);
+            final_setImage2(post.finalImage2);
+            final_setCompPosition(post.finalCompPosition);
+            final_setExcerpt(post.finalExcerpt);
+            ftr_setTags(post.featuredTags);
+            final_setTags(post.finalTags);
+            ftr_setBtnText(post.featuredButtonText);
+            final_setBtnText(post.finalButtonText);
         } else {
             console.log("doesnt have own property");
         }
@@ -77,9 +104,14 @@ export default function SingleProject() {
                 <FeaturedProject
                     title={<span>{stepOne}</span>}
                     image={featuredImage}
+                    image2={ftr_image2}
+                    excerpt={ftr_excerpt}
+                    compPosition={ftr_compPosition}
                     number="01."
                     link={detailUrl}
                     external={true}
+                    tags={ftr_tags}
+                    buttonText={ftr_btnText}
                 />
                 <section className={styles.projectsWrapper}>
                     {steps.map((step, index) => {
@@ -91,8 +123,13 @@ export default function SingleProject() {
                                 title={step.title}
                                 number={`0${index + 2}.`}
                                 image={step.image}
+                                image2={step.image2}
+                                compPosition={step.compPosition}
                                 link={step.link}
                                 external={step.external}
+                                excerpt={step.excerpt}
+                                tags={step.tags}
+                                buttonText={step.buttonText}
                             />
                         );
                     })}
@@ -100,16 +137,16 @@ export default function SingleProject() {
                 <FeaturedProject
                     title={finalText}
                     image={finalImage}
+                    image2={final_image2}
+                    compPosition={final_compPosition}
+                    excerpt={final_excerpt}
                     number={"0" + (steps.length + 2) + "."}
+                    link={siteLink}
+                    external={true}
+                    tags={final_tags}
+                    buttonText={final_btnText}
                 />
-                <section className={styles.buttonWrapper}>
-                    {viewCodeButton()}
-                    <Button
-                        title="View Live Site"
-                        link={siteLink}
-                        target="_blank"
-                    />
-                </section>
+
                 <Footer />
             </div>
         );

@@ -1,6 +1,10 @@
 import globals from "../styles/Global.module.css";
 import styles from "../styles/Project.module.css";
 import Link from "next/link";
+import {
+    ReactCompareSlider,
+    ReactCompareSliderImage,
+} from "react-compare-slider";
 import { useEffect, useState } from "react";
 
 export default function Project(props) {
@@ -37,15 +41,22 @@ export default function Project(props) {
     });
 
     const button = () => {
+        let buttonText = "View Project";
+        if (props.hasOwnProperty("buttonText")) {
+            buttonText = props.buttonText;
+        }
+
         if (props.hasOwnProperty("link")) {
-            if (props.hasOwnProperty("external") && props.external == true) {   
+            if (props.hasOwnProperty("external") && props.external == true) {
                 return (
                     <div
-                        className={styles.buttonWrapper + " " + buttonOrientation()}
+                        className={
+                            styles.buttonWrapper + " " + buttonOrientation()
+                        }
                     >
                         <a href={props.link} target="_blank" rel="noreferrer">
                             <a className={globals.button}>
-                                View Project
+                                {buttonText}
                                 <i
                                     className={
                                         globals.arrow + " fas fa-arrow-right"
@@ -62,7 +73,7 @@ export default function Project(props) {
                 >
                     <Link href={props.link}>
                         <a className={globals.button}>
-                            View Project
+                            {buttonText}
                             <i
                                 className={
                                     globals.arrow + " fas fa-arrow-right"
@@ -81,7 +92,13 @@ export default function Project(props) {
                 return (
                     <a target="_blank" rel="noreferrer" href={props.link}>
                         <img
-                            className={globals.hasShadow + " " + globals.hasPointer + " " + styles.projectImage}
+                            className={
+                                globals.hasShadow +
+                                " " +
+                                globals.hasPointer +
+                                " " +
+                                styles.projectImage
+                            }
                             src={props.image}
                         />
                     </a>
@@ -90,7 +107,13 @@ export default function Project(props) {
             return (
                 <Link href={props.link}>
                     <img
-                        className={globals.hasShadow + " " + globals.hasPointer + " " + styles.projectImage}
+                        className={
+                            globals.hasShadow +
+                            " " +
+                            globals.hasPointer +
+                            " " +
+                            styles.projectImage
+                        }
                         src={props.image}
                     />
                 </Link>
@@ -100,15 +123,64 @@ export default function Project(props) {
         }
     };
 
+    const imagePart = () => {
+        return (
+            <ReactCompareSlider
+                boundsPadding={0}
+                itemOne={
+                    <ReactCompareSliderImage
+                        alt="Image one"
+                        src={props.image}
+                    />
+                }
+                itemTwo={
+                    <ReactCompareSliderImage
+                        alt="Image two"
+                        src={props.image2}
+                        style={{ transform: "scale(1.125)" }}
+                    />
+                }
+                position={props.compPosition}
+                style={{
+                    height: "100%",
+                    width: "100%",
+                }}
+                changePositionOnHover={false}
+            />
+        );
+    };
+
+    const excerpt = () => {
+        if (props.hasOwnProperty("excerpt")) {
+            return <p className={styles.excerpt}>{props.excerpt}</p>;
+        }
+    };
+
+    const tags = () => {
+        if (props.hasOwnProperty("tags")) {
+            return (
+                <div className="tags">
+                    {props.tags.map((tag) => (
+                        <div className="tag">{tag.name}</div>
+                    ))}
+                </div>
+            );
+        }
+    };
+
     return (
         <div className={styles.projectWrapper + " " + projectColor()}>
             <div className="container">
                 <section className={styles.project}>
-                    <div className={styles.imageSide}>{image()}</div>
+                    <div className={styles.imageSide}>{imagePart()}</div>
                     <div
                         className={styles.titleSide + " " + titleOrientation()}
                     >
-                        <h2 className={styles.headline}>{props.title}</h2>
+                        <div className={styles.headline}>
+                            {tags()}
+                            <h2>{props.title}</h2>
+                            {excerpt()}
+                        </div>
                         <div className={styles.largeNumber}>{props.number}</div>
                     </div>
                 </section>

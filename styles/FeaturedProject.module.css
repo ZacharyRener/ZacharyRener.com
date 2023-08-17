@@ -1,6 +1,6 @@
 .dotGuideWrapper {
     position: absolute;
-    bottom: 200px;
+    bottom: 250px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -17,7 +17,7 @@
 .dotGuide::after {
     content: "";
     width: 6px;
-    height: 210px;
+    height: 260px;
     position: absolute;
     top: calc(100% - 10px);
     left: 50%;
@@ -64,10 +64,18 @@
     height: auto;
     text-align: left;
 }
+@media (min-width: 768px) {
+    .title {
+        min-width: 417px;
+    }
+}
 .title > * {
     width: 100%;
     text-align: left;
     display: block;
+    margin-left: auto;
+    width: 568px;
+    max-width: 100%;
 }
 
 .title h2,
@@ -96,13 +104,19 @@
     display: block;
     border-radius: 10px;
 }
-.imageWrapper img {
+.imageWrapper img,
+.imageWrapper img + div,
+.imageWrapper img + div img {
     border-radius: 10px;
 }
 
 .imageWrapper > div {
     border-radius: 10px;
     box-shadow: 0px 3px 24px 0px rgb(0 0 0 / 100%);
+}
+
+.imageWrapper > div > div {
+    border-radius: 10px;
 }
 
 @media (max-width: 769px) {

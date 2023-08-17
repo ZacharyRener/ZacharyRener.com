@@ -200,7 +200,7 @@ const data = {
                 link: "https://github.com/ZacharyRener/ZacharyRener.com/blob/main/components/navbar.js",
                 external: true,
                 excerpt:
-                    "Server side rendering ensures that the site is SEO friendly, and that the user has a fast experience. Here, you can see the server side rendering in action. Pages load instantly, and the user can navigate the site without any lag.",
+                    "Server side rendering ensures that the site is SEO friendly, and that the user has a fast experience. Pages load instantly, and the user can navigate the site without any lag.",
                 tags: [
                     {
                         name: "Code Sample",

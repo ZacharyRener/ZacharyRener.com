@@ -167,8 +167,9 @@ form::before {
         top: -20px;
     }
     #mainstage div {
-        font-size: 30px;
-        line-height: 32px;
+        font-size: 26px;
+        line-height: normal;
+        letter-spacing: 0.11em;
     }
 }
 
@@ -204,4 +205,25 @@ span.linked-title {
     margin-bottom: 20px;
     display: flex !important;
     gap: 10px;
+}
+
+body h1 {
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    font-size: 45px;
+}
+
+body h2,
+body h2 span {
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    line-height: 35px;
+}
+
+html {
+    background: black !important;
 }

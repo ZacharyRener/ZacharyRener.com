@@ -99,7 +99,9 @@ export default function SingleProject() {
                         subpageStyles.bodyCopy + " container " + styles.bodyCopy
                     }
                 >
-                    <p>{content}</p>
+                    <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:0; repeat: true;">
+                        <p>{content}</p>
+                    </div>
                 </section>
                 <FeaturedProject
                     title={<span>{stepOne}</span>}
@@ -157,13 +159,15 @@ export default function SingleProject() {
                 <Navbar />
                 <HeaderImage title={title} />
                 <section
+                    uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:150; repeat: true;"
                     className={
                         subpageStyles.bodyCopy + " container " + styles.bodyCopy
                     }
                 >
-                    <p>{content}</p>
+                    <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:0; repeat: true;">
+                        <p>{content}</p>
+                    </div>
                 </section>
-
                 <Footer />
             </div>
         );

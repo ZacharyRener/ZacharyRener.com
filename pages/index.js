@@ -13,6 +13,7 @@ export default function Home() {
             <Head />
             <Navbar />
             <Mainstage />
+
             <FeaturedProject
                 title={<span>Personal Website</span>}
                 excerpt={
@@ -74,7 +75,7 @@ export default function Home() {
                         Hooks
                     </span>
                 }
-                number="04."
+                number="03."
                 image="/nightdragon/nightdragon_cover.png"
                 image2="/nightdragon/nightdragonwebsite.png"
                 compPosition="33"

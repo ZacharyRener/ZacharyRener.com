@@ -7,8 +7,13 @@ import {
 } from "react-compare-slider";
 
 import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 export default function FeaturedProject(props) {
+    const uniqueId = uuidv4();
+    let plxStr = `y: 100; target: #${uniqueId}`;
+    plxStr = "disabled";
+
     const number = () => {
         if (props.hasOwnProperty("number")) {
             return <div className={styles.largeNumber}>{props.number}</div>;
@@ -67,29 +72,32 @@ export default function FeaturedProject(props) {
     };
 
     const imagePart = () => {
+        let offset = "y: -100";
         return (
-            <ReactCompareSlider
-                boundsPadding={0}
-                itemOne={
-                    <ReactCompareSliderImage
-                        alt="Image one"
-                        src={props.image}
-                    />
-                }
-                itemTwo={
-                    <ReactCompareSliderImage
-                        alt="Image two"
-                        src={props.image2}
-                        style={{ transform: "scale(1.125)" }}
-                    />
-                }
-                position={props.compPosition}
-                style={{
-                    height: "100%",
-                    width: "100%",
-                }}
-                changePositionOnHover={false}
-            />
+            <div uk-parallax={plxStr}>
+                <ReactCompareSlider
+                    boundsPadding={0}
+                    itemOne={
+                        <ReactCompareSliderImage
+                            alt="Image one"
+                            src={props.image}
+                        />
+                    }
+                    itemTwo={
+                        <ReactCompareSliderImage
+                            alt="Image two"
+                            src={props.image2}
+                            style={{ transform: "scale(1.125)" }}
+                        />
+                    }
+                    position={props.compPosition}
+                    style={{
+                        height: "100%",
+                        width: "100%",
+                    }}
+                    changePositionOnHover={false}
+                />
+            </div>
         );
     };
 
@@ -134,7 +142,10 @@ export default function FeaturedProject(props) {
     const tags = () => {
         if (props.hasOwnProperty("tags")) {
             return (
-                <div className="tags">
+                <div
+                    className="tags"
+                    uk-scrollspy="target: > div; cls: uk-animation-slide-bottom-small; delay: 150; repeat: true;"
+                >
                     {props.tags.map((tag) => (
                         <div className="tag">{tag.name}</div>
                     ))}
@@ -144,25 +155,35 @@ export default function FeaturedProject(props) {
     };
 
     return (
-        <section className="featuredProjectWrapper">
+        <section className="featuredProjectWrapper" id={uniqueId}>
             <section className={styles.featuredProject}>
                 <div className={styles.titleWrapper}>
                     <div className={globals.connector}>
                         {number()}
                         <div className={styles.title}>
                             {tags()}
-                            {title()}
-                            {excerpt()}
+                            <div uk-scrollspy="target: > *; cls: uk-animation-slide-bottom-small; delay: 150; repeat: true;">
+                                {title()}
+                                {excerpt()}
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
             <section className={styles.projectWrapper}>
-                <div className={styles.imageWrapper + " container"}>
+                <div
+                    className={styles.imageWrapper + " container"}
+                    uk-scrollspy="target: > *; cls:uk-animation-fade uk-animation-slide-bottom-small; repeat: true;"
+                >
                     {imagePart()}
                 </div>
             </section>
-            <div className={styles.buttonWrapper}>{button()}</div>
+            <div
+                uk-scrollspy="target: > *; cls: uk-animation-slide-bottom-small; repeat: true;"
+                className={styles.buttonWrapper}
+            >
+                {button()}
+            </div>
         </section>
     );
 }

@@ -1,10 +1,11 @@
 .mainstage {
-    height: 800px;
+    height: calc(100vh - 150px);
     display: flex;
     justify-content: flex-start;
     align-items: center;
     position: relative;
     overflow: hidden;
+    min-height: 550px;
 }
 .innerContent {
     text-transform: none;
@@ -33,6 +34,7 @@
     color: white;
     text-align: left;
     width: 700px;
+    max-width: calc(100vw - 50px);
     text-align: left;
 }
 

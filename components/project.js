@@ -6,8 +6,16 @@ import {
     ReactCompareSliderImage,
 } from "react-compare-slider";
 import { useEffect, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 export default function Project(props) {
+    const uniqueId = uuidv4();
+    let plxStr = `y: 100; target: #${uniqueId}`;
+    let plxStr_rev = `y: 100; target: #${uniqueId}`;
+
+    plxStr = "disabled";
+    plxStr_rev = "disabled";
+
     const titleOrientation = () => {
         if (props.orientation == "right") {
             return styles.right;
@@ -124,29 +132,36 @@ export default function Project(props) {
     };
 
     const imagePart = () => {
+        let offset = "y: 50";
+        if (parseInt(props.number) % 2 == 0) {
+            offset = "y: -50";
+        }
+
         return (
-            <ReactCompareSlider
-                boundsPadding={0}
-                itemOne={
-                    <ReactCompareSliderImage
-                        alt="Image one"
-                        src={props.image}
-                    />
-                }
-                itemTwo={
-                    <ReactCompareSliderImage
-                        alt="Image two"
-                        src={props.image2}
-                        style={{ transform: "scale(1.125)" }}
-                    />
-                }
-                position={props.compPosition}
-                style={{
-                    height: "100%",
-                    width: "100%",
-                }}
-                changePositionOnHover={false}
-            />
+            <div uk-parallax={plxStr}>
+                <ReactCompareSlider
+                    boundsPadding={0}
+                    itemOne={
+                        <ReactCompareSliderImage
+                            alt="Image one"
+                            src={props.image}
+                        />
+                    }
+                    itemTwo={
+                        <ReactCompareSliderImage
+                            alt="Image two"
+                            src={props.image2}
+                            style={{ transform: "scale(1.125)" }}
+                        />
+                    }
+                    position={props.compPosition}
+                    style={{
+                        height: "100%",
+                        width: "100%",
+                    }}
+                    changePositionOnHover={false}
+                />
+            </div>
         );
     };
 
@@ -159,7 +174,10 @@ export default function Project(props) {
     const tags = () => {
         if (props.hasOwnProperty("tags")) {
             return (
-                <div className="tags">
+                <div
+                    className="tags"
+                    uk-scrollspy="target: > div; cls: uk-animation-slide-bottom-small; delay: 150; repeat: true;"
+                >
                     {props.tags.map((tag) => (
                         <div className="tag">{tag.name}</div>
                     ))}
@@ -169,28 +187,50 @@ export default function Project(props) {
     };
 
     return (
-        <div className={styles.projectWrapper + " " + projectColor()}>
-            <div className="container">
-                <section className={styles.project}>
-                    <div className={styles.imageSide}>{imagePart()}</div>
-                    <div
-                        className={styles.titleSide + " " + titleOrientation()}
-                    >
-                        <div className={styles.headline}>
-                            {tags()}
-                            <h2>{props.title}</h2>
-                            {excerpt()}
+        <div className="projectWrapper" id={uniqueId}>
+            <div className={styles.projectWrapper + " " + projectColor()}>
+                <div className="container">
+                    <section className={styles.project}>
+                        <div
+                            className={styles.imageSide}
+                            uk-scrollspy="cls: uk-animation-slide-bottom-small; repeat: true;"
+                        >
+                            {imagePart()}
                         </div>
-                        <div className={styles.largeNumber}>{props.number}</div>
-                    </div>
-                </section>
+                        <div
+                            className={
+                                styles.titleSide + " " + titleOrientation()
+                            }
+                        >
+                            <div
+                                className={styles.headline}
+                                uk-parallax={plxStr}
+                            >
+                                {tags()}
+                                <div uk-scrollspy="target: > *; cls: uk-animation-slide-bottom-small; delay: 150; repeat: true;">
+                                    <h2>{props.title}</h2>
+                                    {excerpt()}
+                                </div>
+                            </div>
+                            <div className={styles.largeNumber}>
+                                {props.number}
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div
+                    className={
+                        props.orientation == "right" ? "container relative" : ""
+                    }
+                ></div>
+                <div
+                    className="container relative"
+                    uk-scrollspy="target: > *; cls: uk-animation-slide-bottom-small; repeat: true;"
+                    uk-parallax={plxStr}
+                >
+                    {button()}
+                </div>
             </div>
-            <div
-                className={
-                    props.orientation == "right" ? "container relative" : ""
-                }
-            ></div>
-            <div className="container relative">{button()}</div>
         </div>
     );
 }

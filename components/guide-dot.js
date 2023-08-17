@@ -4,7 +4,10 @@ import { useState } from "react";
 
 export default function GuideDot() {
     return (
-        <section className={styles.dotGuideWrapper}>
+        <section
+            className={styles.dotGuideWrapper}
+            uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:150; repeat: true;"
+        >
             <div className={styles.guideLabel}>Past Work</div>
             <div className={styles.dotGuide}></div>
         </section>

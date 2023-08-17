@@ -11,8 +11,18 @@ export default function Mainstage() {
                 <div className="container">
                     <section className={styles.content}>
                         <div>
-                            <h1>Web Development for Agencies</h1>
-                            <p className={styles.innerContent}>
+                            <h1>
+                                <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:0; repeat: true;">
+                                    Web Development
+                                </div>
+                                <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay: 150; repeat: true;">
+                                    For Agencies
+                                </div>
+                            </h1>
+                            <p
+                                className={styles.innerContent}
+                                uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay: 300; repeat: true;"
+                            >
                                 Hi, I'm Zach. Your Agency's Web Development
                                 Partner.
                             </p>

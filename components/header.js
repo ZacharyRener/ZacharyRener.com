@@ -1,5 +1,8 @@
 import Head from "next/head";
 import Script from "next/script";
+import UIkit from "uikit";
+import "uikit/dist/css/uikit-core.css";
+import Icons from "uikit/dist/js/uikit-icons";
 
 export default function Header() {
     return (

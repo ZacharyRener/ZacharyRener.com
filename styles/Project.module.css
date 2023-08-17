@@ -15,10 +15,10 @@
     content: "";
     background: #363638;
     width: 100%;
-    height: 56%;
+    height: calc(56% + 75px);
     position: absolute;
     left: 0;
-    top: 22%;
+    top: calc(22% - 32.5px);
     z-index: -1;
 }
 
@@ -56,12 +56,24 @@
 .imageSide {
     width: 60%;
     z-index: 2;
+    height: 365px;
+}
+
+.imageSide img {
+    max-height: 100%;
 }
 
 .imageSide > div,
-.imageSide > div img {
+.imageSide > div > div > div,
+.imageSide div {
+    border-radius: 10px;
+}
+
+.imageSide > div > div,
+.imageSide > div > div img {
     border-radius: 10px;
     box-shadow: 0px 3px 24px 0px rgb(0 0 0 / 100%);
+    height: 365px !important;
 }
 
 @media (max-width: 769px) {
@@ -87,7 +99,7 @@
 .buttonWrapper {
     position: absolute;
 
-    bottom: 20px;
+    bottom: 0px;
 }
 @media (max-width: 769px) {
     .buttonWrapper {
@@ -103,13 +115,14 @@
 }
 
 .largeNumber {
-    font-size: 342px;
+    font-size: 450px;
     position: absolute;
     right: 0;
-    bottom: -5px;
+    bottom: -89px;
     color: black;
     font-weight: 700;
     z-index: 1;
+    line-height: normal;
 }
 @media (max-width: 1200px) and (min-width: 768px) {
     .largeNumber {

@@ -371,7 +371,7 @@ const data = {
                 image2: "/PortfolioSite/portfolio-cover.png",
                 compPosition: "75",
                 title: <span>Animations</span>,
-                link: "https://github.com/ZacharyRener/ZacharyRener.com/blob/main/components/navbar.js",
+                link: "https://drive.google.com/file/d/1UPIvYv5OU4g1lOmFeUlUO4hRJ0nX05vg/view?usp=sharing",
                 external: true,
                 excerpt:
                     "The team's UI library enables uniform animations across the site. It fosters a shared understanding between designers and developers, while also giving a feeling of progression when scrolling through the page.",
@@ -412,7 +412,7 @@ const data = {
         finalExcerpt:
             "My front-end code was integrated into a custom WordPress theme by the backend team. The design system tool helped alleviate friction during the handoff. The site is responsive, the components are reusable, and the user feels a sense of progression.",
         codeLink: false,
-        siteLink: "https://zacharyrener.com",
+        siteLink: "https://madre.org",
         finalTags: [
             {
                 name: "Live Site",

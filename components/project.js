@@ -186,6 +186,38 @@ export default function Project(props) {
         }
     };
 
+    const title = () => {
+        if (props.hasOwnProperty("link")) {
+            if (props.hasOwnProperty("external") && props.external == true) {
+                return (
+                    <span class="linked-title">
+                        <a
+                            target="_blank"
+                            rel="noreferrer"
+                            className="linked-title"
+                            href={props.link}
+                        >
+                            {titlePart()}
+                        </a>
+                    </span>
+                );
+            }
+            return (
+                <span className="linked-title">
+                    <Link className="linked-title" href={props.link}>
+                        {titlePart()}
+                    </Link>
+                </span>
+            );
+        } else {
+            return <h2>{props.title}</h2>;
+        }
+    };
+
+    const titlePart = () => {
+        return <h2>{props.title}</h2>;
+    };
+
     return (
         <div className="projectWrapper" id={uniqueId}>
             <div className={styles.projectWrapper + " " + projectColor()}>
@@ -208,11 +240,7 @@ export default function Project(props) {
                             >
                                 {tags()}
                                 <div uk-scrollspy="target: > *; cls: uk-animation-slide-bottom-small; delay: 150; repeat: true;">
-                                    <Link href={props.link}>
-                                        <h2 className="has-link">
-                                            {props.title}
-                                        </h2>
-                                    </Link>
+                                    {title()}
                                     {excerpt()}
                                 </div>
                             </div>

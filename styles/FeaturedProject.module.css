@@ -104,10 +104,20 @@
     display: block;
     border-radius: 10px;
 }
+.imageWrapper > div {
+    width: 1000px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
 .imageWrapper img,
 .imageWrapper img + div,
 .imageWrapper img + div img {
     border-radius: 10px;
+    height: calc(100vh - 349px) !important;
+    max-height: 600px;
+    min-height: 400px;
+    object-position: top !important;
 }
 
 .imageWrapper > div {

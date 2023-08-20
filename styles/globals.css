@@ -227,3 +227,66 @@ body h2 span {
 html {
     background: black !important;
 }
+
+.HeaderImage_headerImage__y1bV1 {
+    min-height: 320px !important;
+}
+
+body a:hover {
+    text-decoration: none;
+}
+
+body a:hover {
+    color: currentColor;
+}
+
+body a {
+    color: inherit;
+}
+
+.Project_buttonRight__Hq5y2 {
+    color: white;
+}
+
+.btn.btn-primary {
+    z-index: 99;
+    position: relative;
+    font-size: 14px;
+    display: inline-block;
+    background: #530d1e;
+    line-height: normal;
+    padding: 15px 20px;
+    letter-spacing: normal;
+    font-family: "Montserrat", sans-serif;
+    text-transform: none;
+    cursor: pointer;
+}
+
+.HeaderImage_headerImage__y1bV1 section {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.SingleProject_bodyCopy__1eWJl > div {
+    margin-bottom: 75px;
+}
+
+.Project_buttonLeft__wSNIc {
+    z-index: 50;
+}
+.Project_buttonRight__Hq5y2 {
+    z-index: 50;
+}
+
+a.Global_button__xd3al:hover {
+    color: white;
+}
+
+.has-link {
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.has-link:hover {
+    opacity: 0.8;
+}

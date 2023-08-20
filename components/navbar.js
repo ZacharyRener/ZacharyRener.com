@@ -67,8 +67,9 @@ export default function Navbar() {
                                 <span className={styles.link}>Resume</span>
                             </a>
                             <span uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay: 300; repeat: true;">
-                                <Link
-                                    href="/contact"
+                                <a
+                                    href="https://us18.list-manage.com/contact-form?u=c3aee447c73a5506280ee1d82&form_id=037fdd1db95dae27e6e70b47841aa70b"
+                                    target="_blank"
                                     uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay: 450; repeat: true;"
                                 >
                                     <span
@@ -78,7 +79,7 @@ export default function Navbar() {
                                     >
                                         Contact
                                     </span>
-                                </Link>
+                                </a>
                             </span>
                             <div
                                 className={

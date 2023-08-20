@@ -2,6 +2,7 @@ import styles from "../styles/Home.module.css";
 import globals from "../styles/Global.module.css";
 import { useState } from "react";
 import GuideDot from "../components/guide-dot";
+import Link from "next/link";
 
 export default function Mainstage() {
     return (
@@ -13,19 +14,30 @@ export default function Mainstage() {
                         <div>
                             <h1>
                                 <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:0; repeat: true;">
-                                    Web Development
+                                    Hi. I'm Zach,
                                 </div>
-                                <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay: 150; repeat: true;">
-                                    For Agencies
+                                <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:150; repeat: true;">
+                                    A Developer.
                                 </div>
                             </h1>
                             <p
                                 className={styles.innerContent}
                                 uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay: 300; repeat: true;"
                             >
-                                Hi, I'm Zach. Your Agency's Web Development
-                                Partner.
+                                Fullstack developer with 6+ years of agency
+                                experience
                             </p>
+                            <a
+                                href="https://us18.list-manage.com/contact-form?u=c3aee447c73a5506280ee1d82&form_id=037fdd1db95dae27e6e70b47841aa70b"
+                                target="_blank"
+                            >
+                                <span
+                                    uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:450; repeat: true;"
+                                    className="btn btn-primary"
+                                >
+                                    Get in Touch
+                                </span>
+                            </a>
                         </div>
                     </section>
                     <div className={styles.captionWrapper}></div>

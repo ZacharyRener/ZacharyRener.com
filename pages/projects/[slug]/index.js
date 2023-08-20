@@ -159,12 +159,11 @@ export default function SingleProject() {
                 <Navbar />
                 <HeaderImage title={title} />
                 <section
-                    uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:150; repeat: true;"
                     className={
                         subpageStyles.bodyCopy + " container " + styles.bodyCopy
                     }
                 >
-                    <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:0; repeat: true;">
+                    <div>
                         <p>{content}</p>
                     </div>
                 </section>

@@ -208,7 +208,11 @@ export default function Project(props) {
                             >
                                 {tags()}
                                 <div uk-scrollspy="target: > *; cls: uk-animation-slide-bottom-small; delay: 150; repeat: true;">
-                                    <h2>{props.title}</h2>
+                                    <Link href={props.link}>
+                                        <h2 className="has-link">
+                                            {props.title}
+                                        </h2>
+                                    </Link>
                                     {excerpt()}
                                 </div>
                             </div>

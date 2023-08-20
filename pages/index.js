@@ -15,23 +15,24 @@ export default function Home() {
             <Mainstage />
 
             <FeaturedProject
-                title={<span>Personal Website</span>}
+                title={<span>Madre</span>}
                 excerpt={
                     <span>
-                        This is the website you're on right now. Built with
-                        Next.JS, React, and UIKit, this site is SEO friendly,
-                        animated, and blazing fast.
+                        Nonprofit client of a mid-size, west-coast based digital
+                        agency. I handled front-end development from the
+                        ground-up which would later be integrated into a custom
+                        WordPress theme by the backend team.
                     </span>
                 }
-                image="/PortfolioSite/portfolio-cover.png"
-                image2="/PortfolioSite/livesitenew.png"
-                compPosition="33"
-                link="/projects/portfolio"
+                image="/madre/madre-livesite.png"
+                image2="/PortfolioSite/portfolio-cover.png"
+                compPosition="75"
+                link="/projects/madre"
                 tags={[
-                    { name: "Fullstack" },
-                    { name: "React" },
-                    { name: "Next.JS SSR" },
-                    { name: "UI/UX Library" },
+                    { name: "Frontend" },
+                    { name: "PatternLab" },
+                    { name: "WordPress" },
+                    { name: "ACF" },
                 ]}
             />
 
@@ -81,6 +82,31 @@ export default function Home() {
                 compPosition="33"
                 link="/projects/nightdragon"
             />
+
+            <Project
+                orientation="left"
+                color="gray"
+                number="04."
+                title={<span>Personal Website</span>}
+                excerpt={
+                    <span>
+                        This is my personal website, built with Next.JS, React,
+                        and UIKit. It's optimized for search engines, features
+                        subtle animations, and delivers fast performance
+                    </span>
+                }
+                image="/PortfolioSite/portfolio-cover.png"
+                image2="/PortfolioSite/livesite.png"
+                compPosition="33"
+                link="/projects/portfolio"
+                tags={[
+                    { name: "Fullstack" },
+                    { name: "React" },
+                    { name: "Next.JS SSR" },
+                    { name: "UI/UX Library" },
+                ]}
+            />
+
             <Footer />
         </div>
     );

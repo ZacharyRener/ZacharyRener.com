@@ -16,11 +16,17 @@
     position: relative;
     z-index: 1;
     color: white;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
+    /* text-transform: uppercase; */
+    /* letter-spacing: 1.5px; */
     font-size: 25px;
-    font-weight: 600;
+    /* font-weight: 600; */
     cursor: pointer;
+
+	font-family: "Epilogue";
+    text-transform: lowercase;
+    letter-spacing: normal;
+    font-weight: 700;
+
 }
 .button::before {
     content: "";
@@ -75,18 +81,3 @@
     overflow: hidden;
 }
 
-.mainstageOverlay {
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(
-        90deg,
-        rgba(83, 13, 30, 0) 0%,
-		/* 69830f */
-        rgba(83, 13, 30, 0.5) 50%
-    );
-    position: absolute;
-    top: 0;
-    left: 0;
-    filter: blur(200px);
-	opacity: 0.5;
-}

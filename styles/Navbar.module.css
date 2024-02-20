@@ -18,19 +18,25 @@
     padding: 50px 20px;
     max-width: 1122px;
     margin: 0 auto;
-    letter-spacing: 1.5px;
+    /* letter-spacing: 1.5px; */
     text-align: right;
     transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
 }
+
 .link,
 .logo {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Epilogue", sans-serif;
     color: white;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-weight: 600;
     margin-right: 50px;
     cursor: pointer;
     transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+.logo {
+	font-family: "Raleway", sans-serif;	
+	font-weight: 800;
+	letter-spacing: -4.5%;
 }
 .link {
     position: relative;

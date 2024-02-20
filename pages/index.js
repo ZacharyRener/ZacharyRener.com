@@ -6,6 +6,7 @@ import FeaturedProject from "../components/featured-project";
 import Project from "../components/project";
 import Footer from "../components/footer";
 import globals from "../styles/Global.module.css";
+import ParallaxContent from "../components/parallax-content.js";
 
 export default function Home() {
     return (
@@ -14,8 +15,34 @@ export default function Home() {
             <Navbar />
             <Mainstage />
 
-            <FeaturedProject
-                title={<span>Madre</span>}
+			
+				<FeaturedProject
+					title={<span>alignco</span>}
+					excerpt={
+						<span>
+							Nonprofit client of a mid-size, west-coast based digital
+							agency. I handled front-end development from the
+							ground-up which would later be integrated into a custom
+							WordPress theme by the backend team.
+						</span>
+					}
+					video="/alignco/alignco-trim-1.mp4"
+					image="/alignco/alignco-2.gif"
+					// image2="/PortfolioSite/portfolio-cover.png"
+					compPosition="75"
+					link="/projects/madre"
+					tags={[
+						{ name: "Frontend" },
+						{ name: "PatternLab" },
+						{ name: "WordPress" },
+						{ name: "ACF" },
+					]}
+				/>
+			
+			<Project
+				orientation="left"
+				color="red"
+                title={<span>abundant futures fund</span>}
                 excerpt={
                     <span>
                         Nonprofit client of a mid-size, west-coast based digital
@@ -24,9 +51,11 @@ export default function Home() {
                         WordPress theme by the backend team.
                     </span>
                 }
+				video="/alignco/alignco-trim-1.mp4"
                 image="/madre/madre-livesite.png"
-                image2="/PortfolioSite/portfolio-cover.png"
+                // image2="/PortfolioSite/portfolio-cover.png"
                 compPosition="75"
+				number="02."
                 link="/projects/madre"
                 tags={[
                     { name: "Frontend" },
@@ -36,10 +65,36 @@ export default function Home() {
                 ]}
             />
 
+
             <Project
+				orientation="right"
+				color="red"
+                title={<span>madre</span>}
+                excerpt={
+                    <span>
+                        Nonprofit client of a mid-size, west-coast based digital
+                        agency. I handled front-end development from the
+                        ground-up which would later be integrated into a custom
+                        WordPress theme by the backend team.
+                    </span>
+                }
+                image="/madre/madre-livesite.png"
+                // image2="/PortfolioSite/portfolio-cover.png"
+                compPosition="75"
+				number="02."
+                link="/projects/madre"
+                tags={[
+                    { name: "Frontend" },
+                    { name: "PatternLab" },
+                    { name: "WordPress" },
+                    { name: "ACF" },
+                ]}
+            />
+
+            {/* <Project
                 orientation="left"
                 color="red"
-                title={<span>DomainTools</span>}
+                title={<span>domaintools</span>}
                 excerpt={
                     <span>
                         Averaging 1M+ views per month, DomainTools needed a
@@ -63,7 +118,7 @@ export default function Home() {
             <Project
                 orientation="right"
                 color="red"
-                title={<span>NightDragon</span>}
+                title={<span>nightdragon</span>}
                 tags={[
                     { name: "Fullstack" },
                     { name: "WordPress" },
@@ -77,8 +132,8 @@ export default function Home() {
                     </span>
                 }
                 number="03."
-                image="/nightdragon/nightdragon_cover.png"
-                image2="/nightdragon/nightdragonwebsite.png"
+                // image="/nightdragon/nightdragon_cover.png"
+                image="/nightdragon/nightdragonwebsite.png"
                 compPosition="33"
                 link="/projects/nightdragon"
             />
@@ -87,7 +142,7 @@ export default function Home() {
                 orientation="left"
                 color="gray"
                 number="04."
-                title={<span>Personal Website</span>}
+                title={<span>personal website</span>}
                 excerpt={
                     <span>
                         This is my personal website, built with Next.JS, React,
@@ -95,8 +150,8 @@ export default function Home() {
                         subtle animations, and delivers fast performance
                     </span>
                 }
-                image="/PortfolioSite/portfolio-cover.png"
-                image2="/PortfolioSite/livesite.png"
+                // image="/PortfolioSite/portfolio-cover.png"
+                image="/PortfolioSite/livesite.png"
                 compPosition="33"
                 link="/projects/portfolio"
                 tags={[
@@ -105,7 +160,7 @@ export default function Home() {
                     { name: "Next.JS SSR" },
                     { name: "UI/UX Library" },
                 ]}
-            />
+            /> */}
 
             <Footer />
         </div>

@@ -7,7 +7,7 @@ export default function Footer() {
         <section className={styles.footerWrapper}>
             <div className="container">
                 <div className={styles.textWrapper}>
-                    <div className={styles.left}>© Zachary Rener 2023</div>
+                    <div className={styles.left}>© Zachary Rener 2024</div>
                     <div className={styles.right}>
                         Designed and built by Zachary Rener
                     </div>

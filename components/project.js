@@ -1,6 +1,7 @@
 import globals from "../styles/Global.module.css";
 import styles from "../styles/Project.module.css";
 import Link from "next/link";
+import ParallaxContent from "../components/parallax-content.js";
 import {
     ReactCompareSlider,
     ReactCompareSliderImage,
@@ -165,6 +166,17 @@ export default function Project(props) {
         );
     };
 
+	const imagePartSimple = () => {
+		return (
+			<div>
+				<img
+					className={styles.projectImage}
+					src={props.image}
+				/>
+			</div>
+		);
+	}
+
     const excerpt = () => {
         if (props.hasOwnProperty("excerpt")) {
             return <p className={styles.excerpt}>{props.excerpt}</p>;
@@ -176,7 +188,7 @@ export default function Project(props) {
             return (
                 <div
                     className="tags"
-                    uk-scrollspy="target: > div; cls: uk-animation-slide-bottom-small; delay: 150; repeat: true;"
+                    uk-scrollspy="target: > div; cls: uk-animation-slide-bottom-small; delay: 25; repeat: false;"
                 >
                     {props.tags.map((tag) => (
                         <div className="tag">{tag.name}</div>
@@ -218,6 +230,22 @@ export default function Project(props) {
         return <h2>{props.title}</h2>;
     };
 
+	const video = () => {
+		return (
+			<div>
+			<video
+				playsInline
+				controls
+				autoPlay
+				loop
+				muted
+				uk-video="autoplay: inview"
+				src={props.video}
+			></video>
+			</div>
+		);
+	}
+
     return (
         <div className="projectWrapper" id={uniqueId}>
             <div className={styles.projectWrapper + " " + projectColor()}>
@@ -225,9 +253,9 @@ export default function Project(props) {
                     <section className={styles.project}>
                         <div
                             className={styles.imageSide}
-                            uk-scrollspy="cls: uk-animation-slide-bottom-small; repeat: true;"
+                            uk-scrollspy="cls: uk-animation-slide-bottom-small; repeat: false;"
                         >
-                            {imagePart()}
+                            {props.hasOwnProperty("video") ? video() : imagePartSimple()}
                         </div>
                         <div
                             className={
@@ -238,9 +266,9 @@ export default function Project(props) {
                                 className={styles.headline}
                                 uk-parallax={plxStr}
                             >
-                                {tags()}
-                                <div uk-scrollspy="target: > *; cls: uk-animation-slide-bottom-small; delay: 150; repeat: true;">
+                                <div uk-scrollspy="target: > *; cls: uk-animation-slide-bottom-small; delay: 50; repeat: false;">
                                     {title()}
+									{tags()}
                                     {excerpt()}
                                 </div>
                             </div>
@@ -257,7 +285,7 @@ export default function Project(props) {
                 ></div>
                 <div
                     className="container relative"
-                    uk-scrollspy="target: > *; cls: uk-animation-slide-bottom-small; repeat: true;"
+                    uk-scrollspy="target: > *; cls: uk-animation-slide-bottom-small; repeat: false;"
                     uk-parallax={plxStr}
                 >
                     {button()}

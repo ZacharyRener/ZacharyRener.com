@@ -57,10 +57,11 @@ h2 {
 }
 
 p {
-    font-family: "Inter", sans-serif;
+    font-family: "Epilogue", sans-serif;
     line-height: 40px;
     line-height: 25px;
     font-size: 17px;
+	font-weight: 200;
 }
 
 .relative {
@@ -178,8 +179,18 @@ span.linked-title h2:hover {
     opacity: 0.65;
 }
 
+
 span.linked-title h2 {
     transition: 0.2s ease;
+	display: inline-block;
+	/* thick underline overlapped and showing behind the text */
+	text-decoration-line: underline;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 2px;
+}
+span.linked-title h2:hover {
+	text-underline-offset: 0px;
+	text-decoration-color: transparent;
 }
 
 a.linked-title,
@@ -189,39 +200,53 @@ span.linked-title {
 }
 
 .tag {
-    background: #530d1e;
+    background: transparent;
     display: inline-block;
-    padding: 4px 7px;
-    font-size: 14px;
+    padding: 0;
+    font-size: 13px;
     font-weight: 500;
+	font-family: "Epilogue", sans-serif;
+	text-transform: lowercase;
 }
 
 .tag:nth-child(n + 2) {
-    background: #b3b3b3;
-    color: black;
+    /* background: #b3b3b3; */
+    /* color: black; */
 }
-
+.tags .tag:not(:nth-last-child(1))::after {
+    content: "•";
+    margin-left: 3px;
+    margin-right: 4px;
+    display: inline-block;
+    font-family: "Epilogue",sans-serif
+}
 .tags {
     margin-bottom: 20px;
     display: flex !important;
-    gap: 10px;
+    /* gap: 10px; */
 }
 
 body h1 {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Epilogue", sans-serif;
     text-transform: uppercase;
     color: white;
-    font-weight: 600;
-    font-size: 45px;
+	font-size: 60px;
+    line-height: 110%;
+    letter-spacing: -1px;
+    font-weight: 700;
 }
 
 body h2,
 body h2 span {
-    font-family: "Montserrat", sans-serif;
-    text-transform: uppercase;
+    font-family: "Epilogue", sans-serif;
+    text-transform: none;
     color: white;
-    font-weight: 600;
-    line-height: 35px;
+    
+
+	font-size: 48px;
+    line-height: 110%;
+    letter-spacing: -0.8px;
+    font-weight: 700;
 }
 
 html {
@@ -251,14 +276,19 @@ body a {
 .btn.btn-primary {
     z-index: 99;
     position: relative;
-    font-size: 14px;
+	font-size: 15px;
+    font-weight: 600;
+    text-transform: lowercase;
+    line-height: 100%;
     display: inline-block;
-    background: #530d1e;
-    line-height: normal;
-    padding: 15px 20px;
+    background: transparent;
+	border: 1px solid white;
+	border-radius: 80px;
+
+    padding: 16px 24px;
     letter-spacing: normal;
-    font-family: "Montserrat", sans-serif;
-    text-transform: none;
+    font-family: "Epiglogue", sans-serif;
+    text-transform: lowercase;
     cursor: pointer;
 }
 
@@ -336,4 +366,8 @@ a.Global_button__xd3al:hover {
     section.featuredProjectWrapper {
         top: 20px !important;
     }
+}
+
+body {
+	background-color: #0d0d0d;
 }

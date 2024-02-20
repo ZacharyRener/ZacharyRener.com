@@ -99,7 +99,7 @@ export default function SingleProject() {
                         subpageStyles.bodyCopy + " container " + styles.bodyCopy
                     }
                 >
-                    <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:0; repeat: true;">
+                    <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:0; repeat: false;">
                         <p>{content}</p>
                     </div>
                 </section>

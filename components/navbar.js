@@ -43,9 +43,9 @@ export default function Navbar() {
                 <nav className={styles.navbarWrapper + " "}>
                     <div className={styles.wrapper}>
                         <div className={styles.left}>
-                            <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small; repeat: true;">
+                            <div >
                                 <Link href="/">
-                                    <span className={styles.logo}>ZR</span>
+                                    <span className={styles.logo}>zr.</span>
                                 </Link>
                             </div>
                         </div>
@@ -54,7 +54,7 @@ export default function Navbar() {
                                 href="https://github.com/ZacharyRener"
                                 target="_blank"
                                 rel="noreferrer"
-                                uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay: 0; repeat: true;"
+                                
                             >
                                 <span className={styles.link}>GitHub</span>
                             </a>
@@ -62,15 +62,15 @@ export default function Navbar() {
                                 href="https://docs.google.com/document/d/1TIZ4wakhXfRBrbQAm_x_dapY2KwqyK7dH9bMZ-bk4Nw/edit?usp=sharing"
                                 target="_blank"
                                 rel="noreferrer"
-                                uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay: 150; repeat: true;"
+                                
                             >
                                 <span className={styles.link}>Resume</span>
                             </a>
-                            <span uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay: 300; repeat: true;">
+                            <span >
                                 <a
                                     href="https://us18.list-manage.com/contact-form?u=c3aee447c73a5506280ee1d82&form_id=037fdd1db95dae27e6e70b47841aa70b"
                                     target="_blank"
-                                    uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay: 450; repeat: true;"
+                                    
                                 >
                                     <span
                                         className={

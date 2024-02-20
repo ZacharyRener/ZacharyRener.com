@@ -13,37 +13,37 @@ export default function Mainstage() {
                     <section className={styles.content}>
                         <div>
                             <h1>
-                                <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:0; repeat: true;">
-                                    Hi. I'm Zach,
+                                <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:0; repeat: false;">
+                                    I'm Zach,
                                 </div>
-                                <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:150; repeat: true;">
-                                    A Developer.
+                                <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:25; repeat: false;">
+                                    A Web Developer.
                                 </div>
                             </h1>
-                            <p
+                            {/* <p
                                 className={styles.innerContent}
-                                uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay: 300; repeat: true;"
+                                uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay: 50; repeat: false;"
                             >
-                                Fullstack developer with 6+ years of agency
+                                fullstack web developer with7+ years of agency
                                 experience
-                            </p>
-                            <a
+                            </p> */}
+                            {/* <a
                                 href="https://us18.list-manage.com/contact-form?u=c3aee447c73a5506280ee1d82&form_id=037fdd1db95dae27e6e70b47841aa70b"
                                 target="_blank"
                             >
                                 <span
-                                    uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:450; repeat: true;"
+                                    uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:75; repeat: false;"
                                     className="btn btn-primary"
                                 >
                                     Get in Touch
                                 </span>
-                            </a>
+                            </a> */}
                         </div>
                     </section>
                     <div className={styles.captionWrapper}></div>
                 </div>
                 <section className={styles.videoWrapper}>
-                    <video
+                    {/* <video
                         className={styles.video}
                         id="video"
                         autoPlay
@@ -52,7 +52,7 @@ export default function Mainstage() {
                         playsInline
                     >
                         <source src="/output.mp4" type="video/mp4" />
-                    </video>
+                    </video> */}
                     <div className={styles.controlSpace}></div>
                 </section>
                 <section className={styles.gradientOverlay}></section>

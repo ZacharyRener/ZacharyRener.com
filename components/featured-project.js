@@ -1,6 +1,7 @@
 import globals from "../styles/Global.module.css";
 import styles from "../styles/FeaturedProject.module.css";
 import Link from "next/link";
+import ParallaxContent from "../components/parallax-content.js";
 import {
     ReactCompareSlider,
     ReactCompareSliderImage,
@@ -70,6 +71,17 @@ export default function FeaturedProject(props) {
             return <img src={props.image} className={globals.hasShadow} />;
         }
     };
+
+	const imagePartSimple = () => {
+		return (
+			
+				<img
+					className={styles.projectImage}
+					src={props.image}
+				/>
+			
+		);
+	}
 
     const imagePart = () => {
         let offset = "y: -100";
@@ -144,7 +156,7 @@ export default function FeaturedProject(props) {
             return (
                 <div
                     className="tags"
-                    uk-scrollspy="target: > div; cls: uk-animation-slide-bottom-small; delay: 150; repeat: true;"
+                    uk-scrollspy="target: > div; cls: uk-animation-slide-bottom-small; delay: 25; repeat: false;"
                 >
                     {props.tags.map((tag) => (
                         <div className="tag">{tag.name}</div>
@@ -154,36 +166,54 @@ export default function FeaturedProject(props) {
         }
     };
 
+	const video = () => {
+		return (
+			<div>
+			<video
+				playsInline
+				autoPlay
+				loop
+				muted
+				uk-video="autoplay: inview"
+				src={props.video}
+			></video>
+			</div>
+		);
+	}
+
     return (
-        <section className="featuredProjectWrapper" id={uniqueId}>
-            <section className={styles.featuredProject}>
-                <div className={styles.titleWrapper}>
-                    <div className={globals.connector}>
-                        {number()}
-                        <div className={styles.title}>
-                            {tags()}
-                            <div uk-scrollspy="target: > *; cls: uk-animation-slide-bottom-small; delay: 150; repeat: true;">
-                                {title()}
-                                {excerpt()}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section className={styles.projectWrapper}>
-                <div
-                    className={styles.imageWrapper + " container"}
-                    uk-scrollspy="target: > *; cls:uk-animation-fade uk-animation-slide-bottom-small; repeat: true;"
-                >
-                    {imagePart()}
-                </div>
-            </section>
-            <div
-                uk-scrollspy="target: > *; cls: uk-animation-slide-bottom-small; repeat: true;"
-                className={styles.buttonWrapper}
-            >
-                {button()}
-            </div>
-        </section>
+		
+			<section className="featuredProjectWrapper" id={uniqueId}>
+				<section className={styles.featuredProject}>
+					<div className={styles.titleWrapper}>
+						<div className={globals.connector}>
+							{number()}
+							<div className={styles.title}>
+								
+								<div uk-scrollspy="target: > *; cls: uk-animation-slide-bottom-small; delay: 50; repeat: false;">
+									{title()}
+									{tags()}
+									{excerpt()}
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section className={styles.projectWrapper}>
+					<div
+						className={styles.imageWrapper + " container"}
+						uk-scrollspy="target: > *; cls:uk-animation-fade uk-animation-slide-bottom-small; repeat: false;"
+					>
+						{props.hasOwnProperty("video") ? video() : imagePartSimple()}
+					</div>
+				</section>
+				<div
+					uk-scrollspy="target: > *; cls: uk-animation-slide-bottom-small; repeat: false;"
+					className={styles.buttonWrapper}
+				>
+					{button()}
+				</div>
+			</section>
+		
     );
 }

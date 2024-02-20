@@ -14,7 +14,7 @@ export default function HeaderImage(props) {
                     <section
                         className={homeStyles.content + " " + styles.pageTitle}
                     >
-                        <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:0; repeat: true;">
+                        <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:0; repeat: false;">
                             {props.title}
                         </div>
                     </section>

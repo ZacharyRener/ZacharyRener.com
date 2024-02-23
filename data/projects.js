@@ -425,7 +425,7 @@ const data = {
         title: "abundant futures fund",
         content:
             "This project has a lot of moving, animated parts that are all tied to scroll position. I was provided the design, and I built the entire frontend in isolation. I then integrated it into a custom WordPress theme that pulled content from ACF flexible content.",
-		featuredVideo: "/abu/abu-take-2.mp4",
+		featuredVideo: "/abu/abu-take-2-trim.mp4",
         featuredImage: "/madre/madre-livesite.png",
         featuredImage2: "/PortfolioSite/portfolio-cover.png",
         featuredCompPosition: "75",

@@ -200,6 +200,7 @@ span.linked-title {
 	@media(max-width: 767px) {
 		margin-bottom: 0;
 	}
+	text-align: center;
 }
 
 .tag {
@@ -210,6 +211,7 @@ span.linked-title {
     font-weight: 500;
 	font-family: "Epilogue", sans-serif;
 	text-transform: lowercase;
+	
 }
 
 .tag:nth-child(n + 2) {
@@ -227,6 +229,7 @@ span.linked-title {
     margin-bottom: 20px;
     display: flex !important;
 	flex-wrap: wrap;
+	justify-content: center;
     /* gap: 10px; */
 }
 
@@ -356,8 +359,8 @@ a.Global_button__xd3al:hover {
     .FeaturedProject_imageWrapper__3wQYv img,
     .FeaturedProject_imageWrapper__3wQYv img + div,
     .FeaturedProject_imageWrapper__3wQYv img + div img {
-        max-height: 200px !important;
-        min-height: 200px !important;
+        max-height: 300px !important;
+        min-height: 300px !important;
     }
 
     .Project_imageSide__2umho > div > div,

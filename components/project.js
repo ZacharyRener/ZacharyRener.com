@@ -275,6 +275,7 @@ export default function Project(props) {
                                     {title()}
 									{tags()}
                                     {excerpt()}
+									{button()}
                                 </div>
                             </div>
                             <div className={styles.largeNumber}>
@@ -282,18 +283,6 @@ export default function Project(props) {
                             </div>
                         </div>
                     </section>
-                </div>
-                <div
-                    className={
-                        props.orientation == "right" ? "container relative" : ""
-                    }
-                ></div>
-                <div
-                    className="container relative"
-                    uk-scrollspy="target: > *; cls: uk-animation-slide-bottom-small; repeat: false;"
-                    uk-parallax={plxStr}
-                >
-                    {button()}
                 </div>
             </div>
         </div>

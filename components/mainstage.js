@@ -16,9 +16,12 @@ export default function Mainstage() {
                                 <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:0; repeat: false;">
                                     I'm Zach,
                                 </div>
-                                <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:25; repeat: false;">
-                                    A Web Developer.
+                                <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:50; repeat: false;">
+                                    an Independent
                                 </div>
+								<div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:100; repeat: false;">
+									Web Developer.
+								</div>
                             </h1>
                             {/* <p
                                 className={styles.innerContent}

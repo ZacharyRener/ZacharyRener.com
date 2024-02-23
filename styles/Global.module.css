@@ -63,7 +63,20 @@
 }
 
 .button:hover::after {
-    width: 100%;
+    /* width: 100%; */
+}
+
+.button {
+	text-decoration-line: underline !important;
+	text-underline-offset: 0px;
+	text-decoration-thickness: 2px;
+	text-decoration-color: transparent;
+	transition: 0.2s ease;
+}
+.button:hover {
+	text-decoration-color: white;
+	text-underline-offset: 2px;
+	opacity: 0.65;
 }
 
 .button i {

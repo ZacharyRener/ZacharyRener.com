@@ -3,7 +3,7 @@
     width: 100%;
     object-fit: cover;
     object-position: top;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .projectWrapper {
@@ -11,7 +11,7 @@
     margin-bottom: 150px;
 }
 .projectWrapper video {
-	border-radius: 10px;
+	border-radius: 20px;
 }
 
 .projectWrapper::after {
@@ -69,12 +69,18 @@
 .imageSide > div,
 .imageSide > div > div > div,
 .imageSide div {
-    border-radius: 10px;
+    border-radius: 20px;
+	height: 100%;
+}
+.imageSide video {
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
 }
 
 .imageSide > div > div,
 .imageSide > div > div img {
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0px 3px 24px 0px rgb(0 0 0 / 100%);
     height: 365px !important;
     object-position: top !important;
@@ -102,9 +108,10 @@
 }
 
 .buttonWrapper {
-    position: absolute;
+    /* position: absolute; */
 
     bottom: 0px;
+	text-align: center;
 }
 @media (max-width: 769px) {
     .buttonWrapper {
@@ -112,7 +119,7 @@
     }
 }
 .buttonLeft {
-    left: calc(60% + 50px);
+    /* left: calc(60% + 50px); */
 }
 
 .buttonRight {
@@ -138,6 +145,7 @@
     filter: blur(4px);
     opacity: 0.125;
     font-weight: 500;
+	display: none;
 }
 @media (max-width: 1200px) and (min-width: 768px) {
     .largeNumber {
@@ -168,6 +176,9 @@
 
 .headline {
     z-index: 2;
+	@media(max-width: 769px) {
+		width: 100%;
+	}
 }
 
 .headline h2 {
@@ -183,6 +194,11 @@
 
 .right {
     order: -1;
+	padding-left: 0;
+	padding-right: 50px;
+	@media(max-width: 767px) {
+		padding-right: 0;
+	}
 }
 
 @media (max-width: 769px) {

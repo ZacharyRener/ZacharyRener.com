@@ -18,21 +18,18 @@ export default function Home() {
 			
 				<FeaturedProject
 					title={<span>alignco</span>}
-					excerpt={
-						<span>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit
-						</span>
-					}
+					
 					video="/alignco/alignco-trim-1.mp4"
 					image="/alignco/alignco-2.gif"
 					// image2="/PortfolioSite/portfolio-cover.png"
 					compPosition="75"
-					link="/projects/madre"
+					link="/projects/alignco"
 					tags={[
-						{ name: "Frontend" },
-						{ name: "PatternLab" },
-						{ name: "WordPress" },
-						{ name: "ACF" },
+						{ name: "animated" },
+						{ name: "fullstack" },
+						{ name: "isolated frontend" },
+						{ name: "wordpress backend" },
+						{ name: "acf flexible content" },
 					]}
 				/>
 			
@@ -40,23 +37,19 @@ export default function Home() {
 				orientation="left"
 				color="red"
                 title={<span>abundant futures fund</span>}
-                excerpt={
-                    <span>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                    </span>
-                }
-				video="/abu/abu-take-2.mp4"
+				video="/abu/abu-take-2-trim.mp4"
                 image="/madre/madre-livesite.png"
                 // image2="/PortfolioSite/portfolio-cover.png"
                 compPosition="75"
 				number="02."
-                link="/projects/madre"
+                link="/projects/abundantfutures"
                 tags={[
-                    { name: "Frontend" },
-                    { name: "PatternLab" },
-                    { name: "WordPress" },
-                    { name: "ACF" },
-                ]}
+						{ name: "scroll-based animations" },
+						{ name: "fullstack" },
+						{ name: "isolated frontend" },
+						{ name: "wordpress backend" },
+						{ name: "acf flexible content" },
+					]}
             />
 
 
@@ -64,24 +57,14 @@ export default function Home() {
 				orientation="right"
 				color="red"
                 title={<span>madre</span>}
-                excerpt={
-                    <span>
-                        Nonprofit client of a mid-size, west-coast based digital
-                        agency. I handled front-end development from the
-                        ground-up which would later be integrated into a custom
-                        WordPress theme by the backend team.
-                    </span>
-                }
                 image="/madre/madre-livesite.png"
                 // image2="/PortfolioSite/portfolio-cover.png"
                 compPosition="75"
 				number="02."
                 link="/projects/madre"
                 tags={[
-                    { name: "Frontend" },
-                    { name: "PatternLab" },
-                    { name: "WordPress" },
-                    { name: "ACF" },
+                    { name: "isolated frontend" },
+                    { name: "integrated by backend team" },
                 ]}
             />
 

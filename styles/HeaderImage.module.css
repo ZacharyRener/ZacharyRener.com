@@ -9,7 +9,9 @@
         text-align: left;
     }
     .headerImage {
-        height: 350px;
-        min-height: unset;
+        height: auto;
+        min-height: unset !important;
+		max-height: unset;
+		margin-bottom: 30px;
     }
 }

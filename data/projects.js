@@ -328,98 +328,136 @@ const data = {
     madre: {
         title: "Madre",
         content:
-            "Nonprofit client of a mid-size, west-coast based digital agency. I handled front-end development from the ground-up which would later be integrated into a custom WordPress theme by the backend team.",
+            "I took over the frontend development of this website very early into the process, and developed around 85% of the frontend. It was all built in isolation, and then passed to the backend team who integrated it into a custom WordPress theme.",
         featuredImage: "/madre/madre-livesite.png",
         featuredImage2: "/PortfolioSite/portfolio-cover.png",
         featuredCompPosition: "75",
-        featuredButtonText: "View Code",
-        stepOne: "Design System",
+        stepOne: "complex layering",
         featuredTags: [
-            {
-                name: "Code Sample",
-            },
-            {
-                name: "Frontend",
-            },
+          
         ],
-        featuredExcerpt:
-            "The frontend of this website was built using a design system tool that allows for rapid prototyping and component-based development. This approach fosters a shared understanding between designers and developers, and eases the handoff between front and backend.",
-        detailUrl:
-            "https://drive.google.com/file/d/1fiAD6mPw3dvzA0FSoeVtAATidMnXAAyI/view?usp=sharing",
+
         steps: [
             {
-                image: "/madre/madre-map.png",
+                image: "/madre/madre-filtering.png",
                 image2: "/PortfolioSite/portfolio-cover.png",
                 compPosition: "75",
-                title: <span>Front-End from the Ground-up</span>,
-                link: "https://drive.google.com/file/d/1iRyvvWeNO41YJ9qFTYdPmcDeu-HXv34c/view",
+                title: <span>filterable content</span>,
+                
                 external: true,
-                excerpt:
-                    "Front-end development was component-based. I helped relieve the frontend team of some of their workload, and was able to deliver a high-quality product on time.",
+                
                 tags: [
-                    {
-                        name: "Code Sample",
-                    },
-                    {
-                        name: "UI/UX Library",
-                    },
+                    
                 ],
-                buttonText: "View Code",
+                
             },
             {
-                image: "/madre/madre-form.png",
+                image: "/madre/madre-content-library.png",
                 image2: "/PortfolioSite/portfolio-cover.png",
                 compPosition: "75",
-                title: <span>Animations</span>,
-                link: "https://drive.google.com/file/d/1UPIvYv5OU4g1lOmFeUlUO4hRJ0nX05vg/view?usp=sharing",
+                title: <span>multiple content libraries</span>,
+                
                 external: true,
-                excerpt:
-                    "The team's UI library enables uniform animations across the site. It fosters a shared understanding between designers and developers, while also giving a feeling of progression when scrolling through the page.",
+                
                 tags: [
-                    {
-                        name: "Code Sample",
-                    },
-                    {
-                        name: "UI/UX Library",
-                    },
+                   
                 ],
-                buttonText: "View Code",
-            },
-            {
-                image: "/madre/madre-quote.png",
-                image2: "/PortfolioSite/portfolio-cover.png",
-                compPosition: "80",
-                title: <span>Extensive QA Testing</span>,
-                link: "https://drive.google.com/file/d/1lEefe2ms-suokmbp0Fm6G68xdWAx6GZ-/view?usp=sharing",
-                external: true,
-                excerpt:
-                    "After finishing initial development, the site enters a rigorous QA testing phase. This ensures the site is responsive, accessible, and performs well across all devices and browsers.",
-                tags: [
-                    {
-                        name: "Code Sample",
-                    },
-                    {
-                        name: "QA Testing",
-                    },
-                ],
-                buttonText: "View Code",
+                
             },
         ],
-        finalImage: "/madre/madre-filterable.png",
+        finalImage: "/madre/madre-wp-admin.png",
         finalImage2: "/PortfolioSite/portfolio-cover.png",
         finalCompPosition: "75",
-        finalText: "Final Product",
-        finalExcerpt:
-            "My front-end code was integrated into a custom WordPress theme by the backend team. The design system tool helped alleviate friction during the handoff. The site is responsive, the components are reusable, and the user feels a sense of progression.",
+        finalText: "wordpress backend",
+        
         codeLink: false,
         siteLink: "https://madre.org",
         finalTags: [
+            
+        ],
+        finalButtonText: "View Live Site",
+        link: "/projects/madre",
+    },
+	alignco: {
+        title: "alignco",
+        content:
+            "After design handoff from a marketing agency's design team, I built all of the frontend components and pages in isolation and then rendered them in a WordPress theme with data pulled from ACF flexible content.",
+		featuredVideo: "/alignco/alignco.mp4",
+        featuredImage: "/madre/madre-livesite.png",
+        featuredImage2: "/PortfolioSite/portfolio-cover.png",
+        featuredCompPosition: "75",
+        
+        stepOne: "page load animation",
+        featuredTags: [
+           
+        ],
+
+        
+        steps: [
             {
-                name: "Live Site",
+				video: "/alignco/aco-pt-2-c.mp4",
+                image: "/madre/madre-map.png",
+                image2: "/PortfolioSite/portfolio-cover.png",
+                compPosition: "75",
+                title: <span>scroll-based animations</span>,
+                external: true,
+                tags: [
+                    
+                ],
+                
             },
+        ],
+        finalImage: "/alignco/wp-admin.png",
+        finalImage2: "/PortfolioSite/portfolio-cover.png",
+        finalCompPosition: "75",
+        finalText: "wordpress backend",
+        codeLink: false,
+        siteLink: "https://alignco.us",
+        finalTags: [
             {
-                name: "Completed Project",
+                name: "ACF flexible content",
             },
+        ],
+        finalButtonText: "View Live Site",
+        link: "/projects/madre",
+    },
+	abundantfutures: {
+        title: "abundant futures fund",
+        content:
+            "This project has a lot of moving, animated parts that are all tied to scroll position. I was provided the design, and I built the entire frontend in isolation. I then integrated it into a custom WordPress theme that pulled content from ACF flexible content.",
+		featuredVideo: "/abu/abu-take-2.mp4",
+        featuredImage: "/madre/madre-livesite.png",
+        featuredImage2: "/PortfolioSite/portfolio-cover.png",
+        featuredCompPosition: "75",
+        
+        stepOne: "scroll based experience",
+        featuredTags: [
+           
+        ],
+
+        
+        steps: [
+            {
+				video: "/abu/abu-take-3.mp4",
+                image: "/madre/madre-map.png",
+                image2: "/PortfolioSite/portfolio-cover.png",
+                compPosition: "75",
+                title: <span>custom designed animations</span>,
+                external: true,
+                tags: [
+                    
+                ],
+                
+            },
+        ],
+        finalImage: "/abu/abu-wp-admin.png",
+        finalImage2: "/PortfolioSite/portfolio-cover.png",
+        finalText: "wordpress backend",
+        
+        codeLink: false,
+        siteLink: "https://abundantfuturesfund.org/",
+        finalTags: [
+            
         ],
         finalButtonText: "View Live Site",
         link: "/projects/madre",

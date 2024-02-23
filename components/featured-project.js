@@ -171,6 +171,7 @@ export default function FeaturedProject(props) {
 			<div>
 			<video
 				playsInline
+				controls
 				autoPlay
 				loop
 				muted
@@ -181,9 +182,14 @@ export default function FeaturedProject(props) {
 		);
 	}
 
+	const apndClass = 
+		props.hasOwnProperty("clickable")
+			? "not-clickable" 
+			: "";
+
     return (
 		
-			<section className="featuredProjectWrapper" id={uniqueId}>
+			<section className={"featuredProjectWrapper " + apndClass} id={uniqueId} >
 				<section className={styles.featuredProject}>
 					<div className={styles.titleWrapper}>
 						<div className={globals.connector}>
@@ -204,7 +210,7 @@ export default function FeaturedProject(props) {
 						className={styles.imageWrapper + " container"}
 						uk-scrollspy="target: > *; cls:uk-animation-fade uk-animation-slide-bottom-small; repeat: false;"
 					>
-						{props.hasOwnProperty("video") ? video() : imagePartSimple()}
+						{(props.hasOwnProperty("video") && props.video) ? video() : imagePartSimple()}
 					</div>
 				</section>
 				<div

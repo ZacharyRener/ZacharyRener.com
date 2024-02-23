@@ -29,10 +29,15 @@ export default function Navbar() {
         <div>
             <section className={"mobileMenu" + " " + mobileMenuClass}>
                 <div className={styles.mobileLinkWrapper}>
-                    <Link href="/projects">
-                        <a className={styles.mobileLink}>Projects</a>
+                    <Link href="https://github.com/ZacharyRener" target="_blank">
+                        <a className={styles.mobileLink}>GitHub</a>
                     </Link>
-                    <Link href="/contact">
+                    <Link href="https://docs.google.com/document/d/1TIZ4wakhXfRBrbQAm_x_dapY2KwqyK7dH9bMZ-bk4Nw/edit?usp=sharing" target="_blank">
+                        <a className={styles.mobileLink}>
+                            Resume
+                        </a>
+                    </Link>
+					<Link href="https://us18.list-manage.com/contact-form?u=c3aee447c73a5506280ee1d82&form_id=037fdd1db95dae27e6e70b47841aa70b" target="_blank">
                         <a className={styles.mobileLink + " " + styles.cta}>
                             Contact
                         </a>

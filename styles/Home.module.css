@@ -18,8 +18,8 @@
 }
 @media (max-width: 769px) {
     .mainstage {
-        min-height: 700px;
-        height: 100vh;
+        min-height: 590px;
+        height: auto;
     }
 }
 
@@ -30,7 +30,7 @@
 
 .content {
     font-family: "Epilogue", sans-serif;
-    font-size: 42px;
+    font-size: 60px;
     line-height: 52px;
     /* letter-spacing: 6.96px; */
     text-transform: lowercase;
@@ -42,6 +42,10 @@
 	margin-right: auto;
     max-width: calc(100vw - 50px);
     text-align: center;
+	@media(max-width: 767px) {
+		letter-spacing: normal !important;
+		font-size: 42px !important;
+	}
 }
 .content h1 {
 	text-transform: lowercase;

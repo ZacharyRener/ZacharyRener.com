@@ -36,6 +36,7 @@ export default function Projects() {
               color={index % 2 == 0 ? "red" : "gray"}
               title={project.title}
               number={`0${index + 1}.`}
+			  video={project.featuredVideo}
               image={project.featuredImage}
               link={project.link}
             />

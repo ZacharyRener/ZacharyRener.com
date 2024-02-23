@@ -40,6 +40,7 @@ export default function SingleProject() {
     const [excerpt, setExcerpt] = useState("");
     const [tags, setTags] = useState("");
     const [ftr_image2, ftr_setImage2] = useState("");
+	const [ftr_video, ftr_setVideo] = useState("");
     const [ftr_compPosition, ftr_setCompPosition] = useState("");
     const [ftr_excerpt, ftr_setExcerpt] = useState("");
     const [ftr_tags, ftr_setTags] = useState("");
@@ -68,6 +69,7 @@ export default function SingleProject() {
             setImage2(post.image2);
             setCompPosition(post.compPosition);
             ftr_setImage2(post.featuredImage2);
+			ftr_setVideo(post.featuredVideo);
             ftr_setCompPosition(post.featuredCompPosition);
             ftr_setExcerpt(post.featuredExcerpt);
             final_setImage2(post.finalImage2);
@@ -105,6 +107,7 @@ export default function SingleProject() {
                 </section>
                 <FeaturedProject
                     title={<span>{stepOne}</span>}
+					video={ftr_video}
                     image={featuredImage}
                     image2={ftr_image2}
                     excerpt={ftr_excerpt}
@@ -114,6 +117,7 @@ export default function SingleProject() {
                     external={true}
                     tags={ftr_tags}
                     buttonText={ftr_btnText}
+					clickable={false}
                 />
                 <section className={styles.projectsWrapper}>
                     {steps.map((step, index) => {
@@ -124,6 +128,7 @@ export default function SingleProject() {
                                 color={index % 2 == 0 ? "red" : "red"}
                                 title={step.title}
                                 number={`0${index + 2}.`}
+								video={step.video}
                                 image={step.image}
                                 image2={step.image2}
                                 compPosition={step.compPosition}
@@ -132,6 +137,7 @@ export default function SingleProject() {
                                 excerpt={step.excerpt}
                                 tags={step.tags}
                                 buttonText={step.buttonText}
+								clickable={false}
                             />
                         );
                     })}
@@ -147,6 +153,7 @@ export default function SingleProject() {
                     external={true}
                     tags={final_tags}
                     buttonText={final_btnText}
+					clickable={false}
                 />
 
                 <Footer />

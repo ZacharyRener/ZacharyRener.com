@@ -246,8 +246,13 @@ export default function Project(props) {
 		);
 	}
 
+	const apndClass = 
+		props.hasOwnProperty("clickable")
+			? "not-clickable" 
+			: "";
+
     return (
-        <div className="projectWrapper" id={uniqueId}>
+        <div className={"projectWrapper " + apndClass} id={uniqueId}>
             <div className={styles.projectWrapper + " " + projectColor()}>
                 <div className="container">
                     <section className={styles.project}>
@@ -255,7 +260,7 @@ export default function Project(props) {
                             className={styles.imageSide}
                             uk-scrollspy="cls: uk-animation-slide-bottom-small; repeat: false;"
                         >
-                            {props.hasOwnProperty("video") ? video() : imagePartSimple()}
+                            {(props.hasOwnProperty("video") && props.video) ? video() : imagePartSimple()}
                         </div>
                         <div
                             className={

@@ -16,6 +16,9 @@
 
 .navbarWrapper {
     padding: 50px 20px;
+	@media(max-width: 920px) {
+		padding: 20px 20px;
+	}
     max-width: 1122px;
     margin: 0 auto;
     /* letter-spacing: 1.5px; */
@@ -64,7 +67,7 @@
     content: "";
     width: 100%;
     height: 15px;
-    background: #530d1e;
+    background: #0b2569;
     position: absolute;
     left: -25%;
     bottom: -25%;

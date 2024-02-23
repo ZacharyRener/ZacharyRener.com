@@ -23,7 +23,7 @@
     cursor: pointer;
 
 	font-family: "Epilogue";
-    text-transform: lowercase;
+    text-transform: capitalize;
     letter-spacing: normal;
     font-weight: 700;
 
@@ -31,19 +31,25 @@
 .button::before {
     content: "";
     width: 85%;
-    height: 100%;
-    background: #530d1e;
+    height: 20px;
+    background: #0b2569;
     position: absolute;
     left: -15%;
-    bottom: -50%;
+    bottom: -1px;
     z-index: -1;
     transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+	display: none;
 }
 .button:hover::before {
     left: -5%;
 }
 .button {
-    position: relative;
+    position: static;
+	@media(max-width: 767px) {
+		margin-top: 10px;
+		font-size: 18px;
+		display: block;
+	}
 }
 .button::after {
     transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
@@ -65,6 +71,10 @@
 
     position: relative;
     left: 0;
+	font-size: 22px;
+}
+.button i:only-child {
+	display: none;
 }
 .button:hover i {
     left: 10px;

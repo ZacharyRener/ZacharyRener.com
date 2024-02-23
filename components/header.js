@@ -18,7 +18,10 @@ export default function Header() {
 	`;
     return (
         <Head>
-            <title>Zachary Rener</title>
+            <title>Zach Rener - Web Developer</title>
+			<meta name="description" content="Zachary Rener is a freelance web developer based out of Dallas, Texas" />
+        	<meta name="robots" content="index, follow" />
+
             <div dangerouslySetInnerHTML={{ __html: analytics }} />
             <meta name="theme-color" content="#000" />
             <link rel="shortcut icon" href="/favicon.png" />

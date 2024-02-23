@@ -20,6 +20,9 @@ dependencies:
   react-dom:
     specifier: 17.0.2
     version: 17.0.2(react@17.0.2)
+  simple-parallax-js:
+    specifier: ^5.6.2
+    version: 5.6.2
   uikit:
     specifier: ^3.16.24
     version: 3.16.24
@@ -2865,6 +2868,10 @@ packages:
       call-bind: 1.0.2
       get-intrinsic: 1.2.1
       object-inspect: 1.12.3
+
+  /simple-parallax-js@5.6.2:
+    resolution: {integrity: sha512-qJPZgg37BstDyvNqONU1YffiJ9P5n4B9IPl5h3kzZ2oEinTRwy1syxfEwTMLXYFHAFCRWXUcWD8yBnVcp8nxdA==}
+    dev: false
 
   /slash@3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}

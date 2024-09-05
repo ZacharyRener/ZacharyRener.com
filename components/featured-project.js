@@ -23,38 +23,22 @@ export default function FeaturedProject(props) {
         }
     };
 
-    const button = () => {
-        let buttonText = "View Project";
-        if (props.hasOwnProperty("buttonText")) {
-            buttonText = props.buttonText;
-        }
+    const button = (buttonText, buttonLink, version, target) => {
+        // defaults
+        buttonText = buttonText ?? "View Live Site";
+        buttonLink = buttonLink ?? "#";
+        version = version ?? "default";
+        target = target ?? "_self";
 
-        if (props.hasOwnProperty("link")) {
-            if (props.hasOwnProperty("external") && props.external == true) {
-                return (
-                    <a target="_blank" rel="noreferrer" href={props.link}>
-                        <span className={globals.button}>
-                            {buttonText}
-                            <i
-                                className={
-                                    globals.arrow + " fas fa-arrow-right"
-                                }
-                            ></i>
-                        </span>
-                    </a>
-                );
-            }
-            return (
-                <Link href={props.link}>
-                    <span className={globals.button}>
-                        {buttonText}
-                        <i
-                            className={globals.arrow + " fas fa-arrow-right"}
-                        ></i>
-                    </span>
-                </Link>
-            );
-        }
+        return (
+            <a
+                href={buttonLink}
+                target={target}
+                className={`button version-${version}`}
+            >
+                {buttonText}
+            </a>
+        );
     };
 
     const image = () => {
@@ -72,16 +56,9 @@ export default function FeaturedProject(props) {
         }
     };
 
-	const imagePartSimple = () => {
-		return (
-			
-				<img
-					className={styles.projectImage}
-					src={props.image}
-				/>
-			
-		);
-	}
+    const imagePartSimple = () => {
+        return <img className={styles.projectImage} src={props.image} />;
+    };
 
     const imagePart = () => {
         let offset = "y: -100";
@@ -166,60 +143,60 @@ export default function FeaturedProject(props) {
         }
     };
 
-	const video = () => {
-		return (
-			<div>
-			<video
-				playsInline
-				controls
-				autoPlay
-				loop
-				muted
-				uk-video="autoplay: inview"
-				src={props.video}
-			></video>
-			</div>
-		);
-	}
+    const video = () => {
+        return (
+            <div>
+                <video
+                    playsInline
+                    controls
+                    autoPlay
+                    loop
+                    muted
+                    uk-video="autoplay: inview"
+                    src={props.video}
+                ></video>
+            </div>
+        );
+    };
 
-	const apndClass = 
-		props.hasOwnProperty("clickable")
-			? "not-clickable" 
-			: "";
+    const apndClass = props.hasOwnProperty("clickable") ? "not-clickable" : "";
 
     return (
-		
-			<section className={"featuredProjectWrapper " + apndClass} id={uniqueId} >
-				<section className={styles.featuredProject}>
-					<div className={styles.titleWrapper}>
-						<div className={globals.connector}>
-							{number()}
-							<div className={styles.title}>
-								
-								<div uk-scrollspy="target: > *; cls: uk-animation-slide-bottom-small; delay: 50; repeat: false;">
-									{title()}
-									{tags()}
-									{excerpt()}
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section className={styles.projectWrapper}>
-					<div
-						className={styles.imageWrapper + " container"}
-						uk-scrollspy="target: > *; cls:uk-animation-fade uk-animation-slide-bottom-small; repeat: false;"
-					>
-						{(props.hasOwnProperty("video") && props.video) ? video() : imagePartSimple()}
-					</div>
-				</section>
-				<div
-					uk-scrollspy="target: > *; cls: uk-animation-slide-bottom-small; repeat: false;"
-					className={styles.buttonWrapper}
-				>
-					{button()}
-				</div>
-			</section>
-		
+        <section
+            className={"featuredProjectWrapper " + apndClass}
+            id={uniqueId}
+        >
+            <section className={styles.featuredProject}>
+                <div className={styles.titleWrapper}>
+                    <div className={globals.connector}>
+                        {number()}
+                        <div className={styles.title}>
+                            <div uk-scrollspy="target: > *; cls: uk-animation-slide-bottom-small; delay: 50; repeat: false;">
+                                {title()}
+                                {tags()}
+                                {excerpt()}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className={styles.projectWrapper}>
+                <div
+                    className={styles.imageWrapper + " container"}
+                    uk-scrollspy="target: > *; cls:uk-animation-fade uk-animation-slide-bottom-small; repeat: false;"
+                >
+                    {props.hasOwnProperty("video") && props.video
+                        ? video()
+                        : imagePartSimple()}
+                </div>
+            </section>
+            <div
+                uk-scrollspy="target: > *; cls: uk-animation-slide-bottom-small; repeat: false;"
+                className={styles.buttonWrapper}
+            >
+                {props.button1 && button(...props.button1)}
+                {props.button2 && button(...props.button2)}
+            </div>
+        </section>
     );
 }

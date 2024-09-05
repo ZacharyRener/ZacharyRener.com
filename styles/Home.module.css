@@ -1,11 +1,12 @@
 .mainstage {
-    height: calc(100vh - 150px);
+    /* height: calc(100vh - 150px); */
     display: flex;
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    overflow: hidden;
-    min-height: 610px;
+    /* overflow: hidden; */
+    /* min-height: 810px; */
+    padding-top: 200px;
 }
 .headerImage {
     min-height: unset !important;
@@ -14,11 +15,11 @@
     text-transform: none;
     letter-spacing: normal;
     font-weight: normal;
-	font-family: "Epilogue";
+    font-family: "Epilogue";
 }
 @media (max-width: 769px) {
     .mainstage {
-        min-height: 590px;
+        /* min-height: 590px; */
         height: auto;
     }
 }
@@ -38,23 +39,23 @@
     color: white;
     text-align: left;
     width: 700px;
-	margin-left: auto;
-	margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
     max-width: calc(100vw - 50px);
     text-align: center;
-	letter-spacing: -1.2px;
-	@media(max-width: 767px) {
-		letter-spacing: normal !important;
-		font-size: 42px !important;
-	}
+    letter-spacing: -1.2px;
+    @media (max-width: 767px) {
+        letter-spacing: normal !important;
+        font-size: 42px !important;
+    }
 }
 .content h1 {
-	text-transform: lowercase;
+    text-transform: lowercase;
 }
 
 .videoWrapper {
-    z-index: -1;
-    height: 100%;
+    z-index: 1;
+    height: 100vh;
     width: 100%;
 
     position: absolute;
@@ -68,6 +69,8 @@
     height: 100%;
     object-fit: cover;
     pointer-events: none;
+    /* opacity: 0.4; */
+    /* filter: blur(5px); */
 }
 
 .controlSpace {
@@ -80,8 +83,8 @@
 }
 
 .gradientOverlay {
-    z-index: -1;
-    height: 100%;
+    z-index: 9;
+    height: 100vh;
     width: 100%;
     background: black;
     position: absolute;
@@ -90,9 +93,21 @@
     background: rgb(0, 0, 0);
     background: linear-gradient(
         0deg,
-        rgba(0, 0, 0, 1) 0%,
         rgba(0, 0, 0, 1) 10%,
-        rgba(255, 255, 255, 0.05) 100%
+        rgba(0, 0, 0, 1) 10%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 10%,
+        rgba(0, 0, 0, 1) 10%,
+        rgba(20, 19, 65, 0.7) 100%
+    );
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 10%,
+        rgba(0, 0, 0, 1) 10%,
+        rgba(4, 30, 66, 0.7) 100%
     );
 }
 

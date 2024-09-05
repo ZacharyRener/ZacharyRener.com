@@ -9,12 +9,15 @@
         "lint": "NODE_OPTIONS=--openssl-legacy-provider next lint"
     },
     "dependencies": {
+        "autoprefixer": "^10.4.20",
         "formik": "^2.2.9",
         "next": "11.1.0",
         "react": "17.0.2",
         "react-compare-slider": "^2.2.0",
         "react-dom": "17.0.2",
+        "sass": "^1.77.8",
         "simple-parallax-js": "^5.6.2",
+        "tailwindcss": "^3.4.10",
         "uikit": "^3.16.24",
         "uuid": "^9.0.0"
     },

@@ -326,16 +326,32 @@ const data = {
         link: "/projects/nightdragon",
     },
     madre: {
-        title: "Madre",
-        content:
-            "I took over the frontend development of this website very early into the process, and developed around 85% of the frontend. It was all built in isolation, and then passed to the backend team who integrated it into a custom WordPress theme.",
+        title: "MADRE",
+        content: `
+			<p>
+				A digital agency client needed a website for MADRE, a non-profit organization. It needed to be able to handle a large amount of content, and be able to be easily updated by non-technical staff. I was able to:
+			</p>
+			<ul>
+				<li>take over the project from another developer</li>
+				<li>build 90% of the frontend (including the entire homepage)</li>
+				<li>complete a multi-round QA process</li>
+				<li>complete a project send-off to the backend developer</li>
+			</ul>
+			<a class='button version-accent' href="https://www.madre.org/" target="_blank">View Live Site</a>
+			`,
+        sidebarContent: `
+			<h3>Tech Stack</h3>
+			<p><strong>Frontend: </strong>SCSS, Twig, UIKit</p>
+
+			<h3>Accesibility</h3>
+			<p>WCAG Level AA</p>
+			<a class='button version-accent' href="https://www.madre.org/" target="_blank">View Live Site</a>
+		`,
         featuredImage: "/madre/madre-livesite.png",
         featuredImage2: "/PortfolioSite/portfolio-cover.png",
         featuredCompPosition: "75",
         stepOne: "complex layering",
-        featuredTags: [
-          
-        ],
+        featuredTags: [],
 
         steps: [
             {
@@ -343,68 +359,70 @@ const data = {
                 image2: "/PortfolioSite/portfolio-cover.png",
                 compPosition: "75",
                 title: <span>filterable content</span>,
-                
+
                 external: true,
-                
-                tags: [
-                    
-                ],
-                
+
+                tags: [],
             },
             {
                 image: "/madre/madre-content-library.png",
                 image2: "/PortfolioSite/portfolio-cover.png",
                 compPosition: "75",
                 title: <span>multiple content libraries</span>,
-                
+
                 external: true,
-                
-                tags: [
-                   
-                ],
-                
+
+                tags: [],
             },
         ],
         finalImage: "/madre/madre-wp-admin.png",
         finalImage2: "/PortfolioSite/portfolio-cover.png",
         finalCompPosition: "75",
         finalText: "wordpress backend",
-        
+
         codeLink: false,
         siteLink: "https://madre.org",
-        finalTags: [
-            
-        ],
+        finalTags: [],
         finalButtonText: "View Live Site",
         link: "/projects/madre",
     },
-	alignco: {
+    alignco: {
         title: "alignco",
-        content:
-            "After design handoff from a marketing agency's design team, I built all of the frontend components and pages in isolation and then rendered them in a WordPress theme with data pulled from ACF flexible content.",
-		featuredVideo: "/alignco/alignco.mp4",
+        content: `
+				<p>A digital agency client needed a website for a new client, alignco. I was able to:</p>
+				<ul>
+					<li>build the entire frontend</li>
+					<li>build the entire backend</li>
+					<li>build a custom load animation for the homepage</li>
+					<li>complete a multi-round QA process</li>
+				</ul>
+				<a class='button version-accent' href="https://alignco.us/" target="_blank">View Live Site</a>
+			`,
+        sidebarContent: `
+			<h3>Tech Stack</h3>
+			<p><strong>Frontend: </strong>SCSS, Twig, UIKit</p>
+			<p><strong>Backend: </strong>WordPress, ACF, ACF Flexible Content, Timber, Twig</p>
+			<h3>Accesibility</h3>
+			<p>WCAG Level AA</p>
+			<a class='button version-accent' href="https://alignco.us/" target="_blank">View Live Site</a>
+		`,
+        featuredVideo: "/alignco/alignco.mp4",
         featuredImage: "/madre/madre-livesite.png",
         featuredImage2: "/PortfolioSite/portfolio-cover.png",
         featuredCompPosition: "75",
-        
-        stepOne: "page load animation",
-        featuredTags: [
-           
-        ],
 
-        
+        stepOne: "page load animation",
+        featuredTags: [],
+
         steps: [
             {
-				video: "/alignco/aco-pt-2-c.mp4",
+                video: "/alignco/aco-pt-2-c.mp4",
                 image: "/madre/madre-map.png",
                 image2: "/PortfolioSite/portfolio-cover.png",
                 compPosition: "75",
                 title: <span>scroll-based animations</span>,
                 external: true,
-                tags: [
-                    
-                ],
-                
+                tags: [],
             },
         ],
         finalImage: "/alignco/wp-admin.png",
@@ -421,46 +439,245 @@ const data = {
         finalButtonText: "View Live Site",
         link: "/projects/madre",
     },
-	abundantfutures: {
-        title: "abundant futures fund",
-        content:
-            "This project has a lot of moving, animated parts that are all tied to scroll position. I was provided the design, and I built the entire frontend in isolation. I then integrated it into a custom WordPress theme that pulled content from ACF flexible content.",
-		featuredVideo: "/abu/abu-take-2-trim.mp4",
+    abundantfutures: {
+        title: "Abundant Futures Fund",
+        content: `
+			<p>A digital agency non-profit client needed a highly-animated website that quickly grabs attention. This project has a lot of moving, animated parts that are all tied to scroll position. I was able to:</p>
+			<ul>
+				<li>build the entire frontend</li>
+				<li>build the entire backend</li>
+				<li>build custom, scroll-based svg animations</li>
+				<li>complete a multi-stage QA process</li>
+			</ul>
+			<a class='button version-accent' href="https://abundantfuturesfund.org/" target="_blank">View Live Site</a>
+			`,
+        sidebarContent: `
+			<h3>Tech Stack</h3>
+			<p><strong>Frontend: </strong>SCSS, GSAP, Twig, UIKit</p>
+			<p><strong>Backend: </strong>WordPress, ACF, ACF Flexible Content, Timber, Twig</p>
+			<h3>Accesibility</h3>
+			<p>WCAG Level AA</p>
+			<a class='button version-accent' href="https://abundantfuturesfund.org/" target="_blank">View Live Site</a>
+		`,
+        featuredVideo: "/abu/abu-take-2-trim.mp4",
         featuredImage: "/madre/madre-livesite.png",
         featuredImage2: "/PortfolioSite/portfolio-cover.png",
         featuredCompPosition: "75",
-        
-        stepOne: "scroll based experience",
-        featuredTags: [
-           
-        ],
 
-        
+        stepOne: "scroll based experience",
+        featuredTags: [],
+
         steps: [
             {
-				video: "/abu/abu-take-3.mp4",
+                video: "/abu/abu-take-3.mp4",
                 image: "/madre/madre-map.png",
                 image2: "/PortfolioSite/portfolio-cover.png",
                 compPosition: "75",
                 title: <span>custom designed animations</span>,
                 external: true,
-                tags: [
-                    
-                ],
-                
+                tags: [],
             },
         ],
         finalImage: "/abu/abu-wp-admin.png",
         finalImage2: "/PortfolioSite/portfolio-cover.png",
         finalText: "wordpress backend",
-        
+
         codeLink: false,
         siteLink: "https://abundantfuturesfund.org/",
-        finalTags: [
-            
-        ],
+        finalTags: [],
         finalButtonText: "View Live Site",
         link: "/projects/madre",
+    },
+    psaros: {
+        title: "Georgetown University: Psaros",
+        content: `
+			<p>
+				A digital agency client needed a website for Georgetown University's Psaros Center, and they needed it in a rush. <br>In <strong>four weeks</strong>, I was able to:
+				<ul>
+					<li>build the entire frontend</li>
+					<li>build the entire backend</li>
+					<li>complete a rigourous QA process</li>
+					<li>achieve a 100% WCAG level AA accessibility rating in SiteImprove</li>
+					<li>work directly with a screen reader user to ensure the site was fully accessible beyond automated ratings.</li>
+				</ul>
+				<a class='button version-accent' href="https://finpolicy.georgetown.edu/" target="_blank">View Live Site</a>
+			</p>
+			
+			`,
+        sidebarContent: `
+			<h3>Tech Stack</h3>
+			<p><strong>Frontend: </strong>Lit.JS & Shoelace Web Components, Vite, SCSS, Framer Motion, GSAP, Twig</p>
+			<p><strong>Backend: </strong>WordPress, ACF, ACF Flexible Content, Timber, Twig</p>
+			<h3>Scope</h3>
+			<p>
+				<strong>20 </strong>Unique components<br>
+				<strong>1 </strong>Unique template<br>
+				<strong>4 </strong>Customizable templates with different heroes<br>
+				<strong>3 </strong>Filterable content libraries<br>
+				Custom animations
+			</p>
+			<a class='button version-accent' href="https://finpolicy.georgetown.edu/" target="_blank">View Live Site</a>
+		`,
+        featuredVideo: "/psaros.mp4",
+        featuredImage: "/madre/madre-livesite.png",
+        featuredImage2: "/PortfolioSite/portfolio-cover.png",
+        featuredCompPosition: "75",
+
+        stepOne: "",
+        featuredTags: [],
+
+        steps: [
+            {
+                video: "/psaors-ada.mp4",
+                image: "/madre/madre-map.png",
+                image2: "/PortfolioSite/portfolio-cover.png",
+                compPosition: "75",
+                title: <span>scroll-based animations</span>,
+                external: true,
+                tags: [],
+            },
+            {
+                video: "/psaros-news.mp4",
+                image: "/madre/madre-map.png",
+                image2: "/PortfolioSite/portfolio-cover.png",
+                compPosition: "75",
+                title: <span>scroll-based animations</span>,
+                external: true,
+                tags: [],
+            },
+        ],
+        finalImage: "/psaros-admin.png",
+        finalImage2: "/PortfolioSite/portfolio-cover.png",
+        finalCompPosition: "75",
+        finalText: "wordpress backend",
+        codeLink: false,
+        siteLink: "https://alignco.us",
+        finalTags: [
+            {
+                name: "ACF flexible content",
+            },
+        ],
+        finalButtonText: "View Live Site",
+        link: "/projects/psaros",
+    },
+    humanityunited: {
+        title: "Humanity United",
+        content: `
+			<p>
+				A digital agency client needed a website for non-profit Humanity United. I was able to:
+				<ul>
+					<li>build the entire frontend</li>
+					<li>complete a multi-process QA process</li>
+					<li>complete a project hand-off to the backend developer</li>
+				</ul>
+				<a class='button version-accent' href="https://humanityunited.org/" target="_blank">View Live Site</a>
+			</p>
+			
+			`,
+        sidebarContent: `
+			<h3>Tech Stack</h3>
+			<p><strong>Frontend: </strong>SCSS, Twig, UIKit</p>
+			<p><strong>Backend: </strong>WordPress, ACF, ACF Flexible Content, Timber, Twig</p>
+			<h3>Accesibility</h3>
+			<p>WCAG Level AA</p>
+			<a class='button version-accent' href="https://humanityunited.org/" target="_blank">View Live Site</a>
+		`,
+        // featuredVideo: "/psaros.mp4",
+        featuredImage: "/hum-1.png",
+        featuredImage2: "/PortfolioSite/portfolio-cover.png",
+        featuredCompPosition: "75",
+
+        stepOne: "",
+        featuredTags: [],
+
+        steps: [
+            {
+                // video: "/psaors-ada.mp4",
+                image: "/hum-2.png",
+                image2: "/PortfolioSite/portfolio-cover.png",
+                compPosition: "75",
+                title: <span>scroll-based animations</span>,
+                external: true,
+                tags: [],
+            },
+        ],
+        finalImage: "/hum-3.png",
+        finalImage2: "/PortfolioSite/portfolio-cover.png",
+        finalCompPosition: "75",
+        finalText: "wordpress backend",
+        codeLink: false,
+        siteLink: "https://humanityunited.org/",
+        finalTags: [
+            {
+                name: "ACF flexible content",
+            },
+        ],
+        finalButtonText: "View Live Site",
+        link: "/projects/humanityunited",
+    },
+    afcny: {
+        title: "Advocates for Children of New York",
+        content: `
+			<p>
+				A digital agency client needed a website for the non-profit Advocates for Children of New York. The site needed to be accessible, and needed to be able to handle a large amount of content. I was able to:
+				<ul>
+					<li>build the entire frontend</li>
+					<li>complete a multi-round QA process</li>
+					<li>complete a project hand-off to the backend developer</li>
+				</ul>
+				<a class='button version-accent' href="https://advocatesforchildren.org/" target="_blank">View Live Site</a>
+			</p>
+			
+			`,
+        sidebarContent: `
+			<h3>Tech Stack</h3>
+			<p><strong>Frontend: </strong>SCSS, Twig, UIKit</p>
+			<p><strong>Backend: </strong>WordPress, ACF, ACF Flexible Content, Timber, Twig</p>
+			<h3>Accesibility</h3>
+			<p>WCAG Level AA</p>
+			<a class='button version-accent' href="https://advocatesforchildren.org/" target="_blank">View Live Site</a>
+		`,
+        // featuredVideo: "/psaros.mp4",
+        featuredImage: "/afc-1.png",
+        featuredImage2: "/PortfolioSite/portfolio-cover.png",
+        featuredCompPosition: "75",
+
+        stepOne: "",
+        featuredTags: [],
+
+        steps: [
+            {
+                // video: "/psaors-ada.mp4",
+                image: "/afc-2.png",
+                image2: "/PortfolioSite/portfolio-cover.png",
+                compPosition: "75",
+                title: <span>scroll-based animations</span>,
+                external: true,
+                tags: [],
+            },
+            {
+                // video: "/psaros-news.mp4",
+                image: "/afc-3.png",
+                image2: "/PortfolioSite/portfolio-cover.png",
+                compPosition: "75",
+                title: <span>scroll-based animations</span>,
+                external: true,
+                tags: [],
+            },
+        ],
+        finalImage: "/afc-4.png",
+        finalImage2: "/PortfolioSite/portfolio-cover.png",
+        finalCompPosition: "75",
+        finalText: "wordpress backend",
+        codeLink: false,
+        siteLink: "https://alignco.us",
+        finalTags: [
+            {
+                name: "ACF flexible content",
+            },
+        ],
+        finalButtonText: "View Live Site",
+        link: "/projects/afcny",
     },
 };
 

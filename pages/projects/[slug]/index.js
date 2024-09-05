@@ -27,6 +27,7 @@ export default function SingleProject() {
             <Link href="/">Return Home</Link>
         </span>
     );
+    const [sidebarContent, setSidebarContent] = useState("");
     const [featuredImage, setFeaturedImage] = useState("Loading");
     const [detailUrl, setDetailUrl] = useState("");
     const [images, setImages] = useState([]);
@@ -40,7 +41,7 @@ export default function SingleProject() {
     const [excerpt, setExcerpt] = useState("");
     const [tags, setTags] = useState("");
     const [ftr_image2, ftr_setImage2] = useState("");
-	const [ftr_video, ftr_setVideo] = useState("");
+    const [ftr_video, ftr_setVideo] = useState("");
     const [ftr_compPosition, ftr_setCompPosition] = useState("");
     const [ftr_excerpt, ftr_setExcerpt] = useState("");
     const [ftr_tags, ftr_setTags] = useState("");
@@ -52,11 +53,14 @@ export default function SingleProject() {
     const [final_btnText, final_setBtnText] = useState("View Project");
 
     useEffect(() => {
+        document.body.classList = "";
+        document.body.classList.add("single-project");
         if (data.hasOwnProperty(slug)) {
             const post = data[slug];
             setTitle(post.title);
             setStepOne(post.stepOne);
             setContent(post.content);
+            setSidebarContent(post.sidebarContent);
             setFeaturedImage(post.featuredImage);
             setImages(post.images);
             setFinalImage(post.finalImage);
@@ -69,7 +73,7 @@ export default function SingleProject() {
             setImage2(post.image2);
             setCompPosition(post.compPosition);
             ftr_setImage2(post.featuredImage2);
-			ftr_setVideo(post.featuredVideo);
+            ftr_setVideo(post.featuredVideo);
             ftr_setCompPosition(post.featuredCompPosition);
             ftr_setExcerpt(post.featuredExcerpt);
             final_setImage2(post.finalImage2);
@@ -95,66 +99,87 @@ export default function SingleProject() {
             <div className={styles.singleProjectWrapper}>
                 <Head />
                 <Navbar />
-                <HeaderImage title={title} />
                 <section
                     className={
                         subpageStyles.bodyCopy + " container " + styles.bodyCopy
                     }
                 >
-                    <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:0; repeat: false;">
-                        <p>{content}</p>
+                    <div className="inner">
+                        <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:0; repeat: false;">
+                            <h1>{title}</h1>
+                            <div
+                                dangerouslySetInnerHTML={{ __html: content }}
+                            ></div>
+                        </div>
                     </div>
                 </section>
-                <FeaturedProject
-                    title={<span>{stepOne}</span>}
-					video={ftr_video}
-                    image={featuredImage}
-                    image2={ftr_image2}
-                    excerpt={ftr_excerpt}
-                    compPosition={ftr_compPosition}
-                    number="01."
-                    link={detailUrl}
-                    external={true}
-                    tags={ftr_tags}
-                    buttonText={ftr_btnText}
-					clickable={false}
-                />
-                <section className={styles.projectsWrapper}>
-                    {steps.map((step, index) => {
-                        return (
-                            <Project
-                                key={index}
-                                orientation={index % 2 != 0 ? "left" : "right"}
-                                color={index % 2 == 0 ? "red" : "red"}
-                                title={step.title}
-                                number={`0${index + 2}.`}
-								video={step.video}
-                                image={step.image}
-                                image2={step.image2}
-                                compPosition={step.compPosition}
-                                link={step.link}
-                                external={step.external}
-                                excerpt={step.excerpt}
-                                tags={step.tags}
-                                buttonText={step.buttonText}
-								clickable={false}
+
+                <div className="main-container">
+                    <div className="p-inner">
+                        <div
+                            className="main-sidebar"
+                            dangerouslySetInnerHTML={{ __html: sidebarContent }}
+                        ></div>
+                        <div className="main-content">
+                            <FeaturedProject
+                                title={<span>{stepOne}</span>}
+                                video={ftr_video}
+                                image={featuredImage}
+                                image2={ftr_image2}
+                                excerpt={ftr_excerpt}
+                                compPosition={ftr_compPosition}
+                                number="01."
+                                link={detailUrl}
+                                external={true}
+                                tags={ftr_tags}
+                                buttonText={ftr_btnText}
+                                clickable={false}
                             />
-                        );
-                    })}
-                </section>
-                <FeaturedProject
-                    title={finalText}
-                    image={finalImage}
-                    image2={final_image2}
-                    compPosition={final_compPosition}
-                    excerpt={final_excerpt}
-                    number={"0" + (steps.length + 2) + "."}
-                    link={siteLink}
-                    external={true}
-                    tags={final_tags}
-                    buttonText={final_btnText}
-					clickable={false}
-                />
+                            <section className={styles.projectsWrapper}>
+                                {steps.map((step, index) => {
+                                    return (
+                                        <Project
+                                            key={index}
+                                            orientation={
+                                                index % 2 != 0
+                                                    ? "left"
+                                                    : "right"
+                                            }
+                                            color={
+                                                index % 2 == 0 ? "red" : "red"
+                                            }
+                                            title={step.title}
+                                            number={`0${index + 2}.`}
+                                            video={step.video}
+                                            image={step.image}
+                                            image2={step.image2}
+                                            compPosition={step.compPosition}
+                                            link={step.link}
+                                            external={step.external}
+                                            excerpt={step.excerpt}
+                                            tags={step.tags}
+                                            buttonText={step.buttonText}
+                                            clickable={false}
+                                        />
+                                    );
+                                })}
+                            </section>
+                            <FeaturedProject
+                                title={finalText}
+                                image={finalImage}
+                                image2={final_image2}
+                                compPosition={final_compPosition}
+                                excerpt={final_excerpt}
+                                number={"0" + (steps.length + 2) + "."}
+                                link={siteLink}
+                                external={true}
+                                tags={final_tags}
+                                buttonText={final_btnText}
+                                clickable={false}
+                            />
+                        </div>
+                    </div>
+                </div>
 
                 <Footer />
             </div>

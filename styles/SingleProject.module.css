@@ -1,29 +1,32 @@
-.bodyCopy p {
-	text-align: center;
-	font-weight: 400;
-	letter-spacing: normal;
+.bodyCopy p,
+.bodyCopy li {
+    font-weight: 400;
+    letter-spacing: normal;
+    font-family: "Epilogue", sans-serif;
 }
-
+.bodyCopy p {
+    text-align: center;
+}
 .bodyCopy {
     margin-bottom: 125px;
-	@media(max-width: 767px) {
-		margin-bottom: 0;
-		padding-bottom: 40px;
-	}
+    @media (max-width: 767px) {
+        margin-bottom: 0;
+        padding-bottom: 40px;
+    }
 }
 
 .projectsWrapper {
     margin-bottom: 300px;
-	@media(max-width: 767px) {
-		margin-bottom: 171px;
-	}
+    @media (max-width: 767px) {
+        margin-bottom: 171px;
+    }
 }
 
 .buttonWrapper {
     text-align: center;
     display: flex;
     justify-content: center;
-	flex-wrap: wrap;
+    flex-wrap: wrap;
     align-items: flex-start;
     margin-bottom: 225px;
     margin-top: -80px;

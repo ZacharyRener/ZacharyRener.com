@@ -1,6 +1,7 @@
 import globals from "../styles/Global.module.css";
 import styles from "../styles/Footer.module.css";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Footer() {
     return (
@@ -9,7 +10,29 @@ export default function Footer() {
                 <div className={styles.textWrapper}>
                     <div className={styles.left}>© Zachary Rener 2024</div>
                     <div className={styles.right}>
-                        Designed and built by Zachary Rener
+                        {/* Designed and built by Zachary Rener */}
+                        <Link
+                            href="https://github.com/ZacharyRener"
+                            target="_blank"
+                        >
+                            <a className={styles.mobileLink}>GitHub</a>
+                        </Link>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <Link
+                            href="https://docs.google.com/document/d/1TIZ4wakhXfRBrbQAm_x_dapY2KwqyK7dH9bMZ-bk4Nw/edit?usp=sharing"
+                            target="_blank"
+                        >
+                            <a className={styles.mobileLink}>Resume</a>
+                        </Link>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <Link
+                            href="https://us18.list-manage.com/contact-form?u=c3aee447c73a5506280ee1d82&form_id=037fdd1db95dae27e6e70b47841aa70b"
+                            target="_blank"
+                        >
+                            <a className={styles.mobileLink + " " + styles.cta}>
+                                Contact
+                            </a>
+                        </Link>
                     </div>
                 </div>
             </div>

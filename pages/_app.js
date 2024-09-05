@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import "../styles/main.scss";
 
 import { useEffect } from "react";
 

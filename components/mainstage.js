@@ -19,10 +19,13 @@ export default function Mainstage() {
                                 <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:50; repeat: false;">
                                     an Independent
                                 </div>
-								<div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:100; repeat: false;">
-									Web Developer.
-								</div>
+                                <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:100; repeat: false;">
+                                    Web Developer.
+                                </div>
                             </h1>
+                            <div class="guideLabel">
+                                check out my recent full-builds:
+                            </div>
                             {/* <p
                                 className={styles.innerContent}
                                 uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay: 50; repeat: false;"
@@ -46,7 +49,7 @@ export default function Mainstage() {
                     <div className={styles.captionWrapper}></div>
                 </div>
                 <section className={styles.videoWrapper}>
-                    {/* <video
+                    <video
                         className={styles.video}
                         id="video"
                         autoPlay
@@ -55,12 +58,12 @@ export default function Mainstage() {
                         playsInline
                     >
                         <source src="/output.mp4" type="video/mp4" />
-                    </video> */}
+                    </video>
                     <div className={styles.controlSpace}></div>
                 </section>
                 <section className={styles.gradientOverlay}></section>
             </section>
-            <GuideDot />
+            {/* <GuideDot /> */}
         </div>
     );
 }

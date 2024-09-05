@@ -2,20 +2,21 @@
     background: #0d0d0d;
     color: white;
     padding: 20px 0;
-	font-family: "Epilogue", sans-serif;
+    font-family: "Epilogue", sans-serif;
     text-transform: lowercase;
     font-weight: 400;
     /* letter-spacing: 1.5px; */
     font-size: 13px;
+    border-top: 1px solid #333;
 }
 
 .textWrapper {
     display: flex;
     flex-wrap: wrap;
-	@media(max-width: 767px) {
-		justify-content: center;
-		text-align: center;
-	}
+    @media (max-width: 767px) {
+        justify-content: center;
+        text-align: center;
+    }
 }
 .left {
     width: 50%;
@@ -27,7 +28,8 @@
 .left,
 .right {
     font-size: 13px;
-	font-weight: 500;
+    font-weight: 500;
+    text-transform: none;
 }
 
 @media (max-width: 769px) {

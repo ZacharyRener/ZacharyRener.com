@@ -166,16 +166,13 @@ export default function Project(props) {
         );
     };
 
-	const imagePartSimple = () => {
-		return (
-			<div>
-				<img
-					className={styles.projectImage}
-					src={props.image}
-				/>
-			</div>
-		);
-	}
+    const imagePartSimple = () => {
+        return (
+            <div>
+                <img className={styles.projectImage} src={props.image} />
+            </div>
+        );
+    };
 
     const excerpt = () => {
         if (props.hasOwnProperty("excerpt")) {
@@ -196,6 +193,24 @@ export default function Project(props) {
                 </div>
             );
         }
+    };
+
+    const newbutton = (buttonText, buttonLink, version, target) => {
+        // defaults
+        buttonText = buttonText ?? "View Live Site";
+        buttonLink = buttonLink ?? "#";
+        version = version ?? "default";
+        target = target ?? "_self";
+
+        return (
+            <a
+                href={buttonLink}
+                target={target}
+                className={`button version-${version}`}
+            >
+                {buttonText}
+            </a>
+        );
     };
 
     const title = () => {
@@ -230,26 +245,23 @@ export default function Project(props) {
         return <h2>{props.title}</h2>;
     };
 
-	const video = () => {
-		return (
-			<div>
-			<video
-				playsInline
-				controls
-				autoPlay
-				loop
-				muted
-				uk-video="autoplay: inview"
-				src={props.video}
-			></video>
-			</div>
-		);
-	}
+    const video = () => {
+        return (
+            <div>
+                <video
+                    playsInline
+                    controls
+                    autoPlay
+                    loop
+                    muted
+                    uk-video="autoplay: inview"
+                    src={props.video}
+                ></video>
+            </div>
+        );
+    };
 
-	const apndClass = 
-		props.hasOwnProperty("clickable")
-			? "not-clickable" 
-			: "";
+    const apndClass = props.hasOwnProperty("clickable") ? "not-clickable" : "";
 
     return (
         <div className={"projectWrapper " + apndClass} id={uniqueId}>
@@ -260,7 +272,9 @@ export default function Project(props) {
                             className={styles.imageSide}
                             uk-scrollspy="cls: uk-animation-slide-bottom-small; repeat: false;"
                         >
-                            {(props.hasOwnProperty("video") && props.video) ? video() : imagePartSimple()}
+                            {props.hasOwnProperty("video") && props.video
+                                ? video()
+                                : imagePartSimple()}
                         </div>
                         <div
                             className={
@@ -273,9 +287,14 @@ export default function Project(props) {
                             >
                                 <div uk-scrollspy="target: > *; cls: uk-animation-slide-bottom-small; delay: 50; repeat: false;">
                                     {title()}
-									{tags()}
+                                    {tags()}
                                     {excerpt()}
-									{button()}
+                                    <div className="buttons">
+                                        {props.button1 &&
+                                            newbutton(...props.button1)}
+                                        {props.button2 &&
+                                            newbutton(...props.button2)}
+                                    </div>
                                 </div>
                             </div>
                             <div className={styles.largeNumber}>

@@ -24,7 +24,23 @@ export default function Mainstage() {
                                 </div>
                             </h1>
                             <div class="guideLabel">
-                                check out my recent full-builds:
+                                <a
+                                    class="button version-accent"
+                                    href="https://docs.google.com/document/d/1F7Xmob4Jh8ImSJ9EataWQ7xxaf8bIx4cs6jWiF7IfBw/edit#heading=h.hnwatklyy346"
+                                    target="_blank"
+                                >
+                                    Code Samples
+                                </a>
+                                <a
+                                    class="button"
+                                    target="_blank"
+                                    href="https://docs.google.com/document/d/1TIZ4wakhXfRBrbQAm_x_dapY2KwqyK7dH9bMZ-bk4Nw/edit?usp=sharing"
+                                >
+                                    View Resume
+                                </a>
+                                <div class="guideLabel">
+                                    check out my recent full-builds:
+                                </div>
                             </div>
                             {/* <p
                                 className={styles.innerContent}

@@ -1,3 +1,4 @@
+import "hamburgers/dist/hamburgers.min.css";
 import "../styles/globals.css";
 import "../styles/main.scss";
 

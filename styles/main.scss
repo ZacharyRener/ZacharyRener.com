@@ -1,3 +1,78 @@
+@mixin classMatch($name) {
+    [class*="#{$name}"] {
+        @content;
+    }
+}
+
+$breakpoints: (
+    b6: 768px,
+    b8: 1200px,
+);
+
+@mixin min($breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+
+@mixin max($breakpoint) {
+    $max-width: calc(map-get($breakpoints, $breakpoint) - 1px);
+    @media (max-width: $max-width) {
+        @content;
+    }
+}
+
+@mixin b0 {
+    @include min(b0) {
+        @content;
+    }
+}
+@mixin b1 {
+    @include min(b1) {
+        @content;
+    }
+}
+@mixin b2 {
+    @include min(b2) {
+        @content;
+    }
+}
+@mixin b3 {
+    @include min(b3) {
+        @content;
+    }
+}
+@mixin b4 {
+    @include min(b4) {
+        @content;
+    }
+}
+@mixin b5 {
+    @include min(b5) {
+        @content;
+    }
+}
+@mixin b6 {
+    @include min(b6) {
+        @content;
+    }
+}
+@mixin b7 {
+    @include min(b7) {
+        @content;
+    }
+}
+@mixin b8 {
+    @include min(b8) {
+        @content;
+    }
+}
+@mixin b9 {
+    @include min(b9) {
+        @content;
+    }
+}
+
 .button {
     background: transparent;
     border: 1px solid white;
@@ -39,6 +114,9 @@ body.home {
             }
         }
     }
+    [class*="FeaturedProject_buttonWrapper"] {
+        display: none;
+    }
 }
 
 #mainstage > .container {
@@ -79,7 +157,10 @@ body.single-project:not(.home) {
         & p {
             text-align: left;
         }
-        padding-top: 200px;
+        padding-top: 100px;
+        @include b6 {
+            padding-top: 200px;
+        }
         h1 {
             text-transform: none;
             color: #141341;
@@ -106,6 +187,24 @@ body.single-project:not(.home) {
     [class*="Navbar_link"],
     [class*="Navbar_logo"] {
         color: #141341;
+    }
+    &.single-project {
+        .mobileMenu.active {
+            [class*="Navbar_link"],
+            & + [class*="Navbar_navbar"] {
+                [class*="Navbar_logo"] {
+                    color: #f4f0ef;
+                }
+            }
+            [class*="Navbar_link"] {
+                color: #f4f0ef;
+            }
+        }
+    }
+    &.single-project {
+        .button {
+            color: #f4f0ef;
+        }
     }
     .scrolled {
         background: #f4f0ef;
@@ -219,6 +318,18 @@ body.single-project:not(.home) {
         flex-direction: column;
         gap: 60px;
     }
+    @include max(b6) {
+        .main-container:has(.p-inner) .p-inner {
+            flex-direction: column;
+            .main-sidebar,
+            .main-content {
+                width: 100%;
+            }
+            .main-sidebar {
+                position: relative;
+            }
+        }
+    }
 }
 
 .main-container {
@@ -236,7 +347,9 @@ body.single-project:not(.home) {
     }
     .main-sidebar {
         position: sticky;
-        top: 150px;
+        @include b6 {
+            top: 150px;
+        }
         width: 30%;
         overflow: auto;
         display: inline-block;
@@ -253,4 +366,163 @@ body.single-project:not(.home) {
 .buttons {
     display: flex;
     justify-content: center;
+}
+
+[class*="projectWrapper"],
+[class*="ProjectWrapper"] {
+    z-index: 10;
+    position: relative;
+}
+
+[class*="projectWrapper"]::after {
+    display: none;
+}
+@include max(b6) {
+    .featuredProjectWrapper {
+        margin-bottom: 190px;
+    }
+}
+
+.button {
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.guideLabel .button {
+    display: inline-flex;
+    margin-right: 12px;
+    margin-bottom: 16px;
+}
+
+@include classMatch("navbarWrapper") {
+    @include classMatch("button") {
+        margin-right: 0;
+    }
+}
+
+@include classMatch("Navbar_link") {
+    &::after {
+        display: none;
+    }
+}
+
+body {
+    @include classMatch("Navbar_wrapper") {
+        justify-content: space-between;
+    }
+    @include classMatch("Navbar_left") {
+        width: auto;
+    }
+    @include classMatch("Navbar_right") {
+        width: auto;
+    }
+}
+
+.hamburger-inner {
+    &,
+    &::before,
+    &::after {
+        background: white !important;
+    }
+}
+
+body.single-project {
+    .hamburger {
+        &:not(.is-active) {
+            .hamburger-inner {
+                &,
+                &::before,
+                &::after {
+                    background: #141341 !important;
+                }
+            }
+        }
+    }
+}
+
+.hamburger {
+    // z-index: 100;
+    position: relative;
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.mobileMenu {
+    padding-top: 100px;
+    a {
+        display: block;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 30px;
+        span {
+            margin: 0;
+        }
+        &:not(:first-child) {
+            border-top: 1px solid white;
+            padding-top: 30px;
+        }
+    }
+}
+
+@include max(b6) {
+    body.single-project:not(.home) {
+        .main-container {
+            padding-top: 50px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .main-content {
+            padding-left: 0;
+        }
+        .main-sidebar {
+            margin-bottom: 50px;
+        }
+        .featuredProjectWrapper {
+            margin-bottom: 0;
+        }
+    }
+}
+
+body.single-project:not(.home) [class*="imageWrapper"] img,
+body.single-project:not(.home) video {
+    @include max(b6) {
+        height: 300px !important;
+        min-height: unset !important;
+    }
+}
+
+body.home [class*="featuredProjectWrapper"] [class*="projectWrapper"] img {
+    @include max(b6) {
+        min-height: 300px !important;
+        height: 300px;
+    }
+}
+
+@include b6 {
+    [class*="ProjectWrapper"] {
+        margin-bottom: 190px;
+    }
+    body.single-project {
+        .main-container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        [class*="ProjectWrapper"] {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@include max(b6) {
+    @include classMatch("imageSide") {
+        img {
+            height: 300px;
+        }
+    }
+    @include classMatch("FeaturedProject_title") {
+        padding-left: 20px;
+    }
 }

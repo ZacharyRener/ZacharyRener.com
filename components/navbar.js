@@ -6,6 +6,7 @@ import Link from "next/link";
 export default function Navbar() {
     const [scrolled, setScrolled] = useState("");
     const [mobileMenuClass, setMobileMenuClass] = useState("");
+    const [isActive, setIsActive] = useState(false);
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
@@ -25,37 +26,51 @@ export default function Navbar() {
         }
     };
 
-    return (
-        <div>
-            <section className={"mobileMenu" + " " + mobileMenuClass}>
-                <div className={styles.mobileLinkWrapper}>
-                    <Link
-                        href="https://github.com/ZacharyRener"
-                        target="_blank"
-                    >
-                        <a className={styles.mobileLink}>GitHub</a>
-                    </Link>
-                    <Link
-                        href="https://github.com/ZacharyRener"
-                        target="_blank"
-                    >
-                        <a className={styles.mobileLink}>GitHub</a>
-                    </Link>
-                    <Link
-                        href="https://docs.google.com/document/d/1TIZ4wakhXfRBrbQAm_x_dapY2KwqyK7dH9bMZ-bk4Nw/edit?usp=sharing"
-                        target="_blank"
-                    >
-                        <a className={styles.mobileLink}>Resume</a>
-                    </Link>
-                    <Link
+    const navbarLinks = () => {
+        return (
+            <>
+                <a
+                    href="https://docs.google.com/document/d/1TIZ4wakhXfRBrbQAm_x_dapY2KwqyK7dH9bMZ-bk4Nw/edit?usp=sharing"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <span className={styles.link}>Resume</span>
+                </a>
+                <a
+                    href="https://docs.google.com/document/d/1F7Xmob4Jh8ImSJ9EataWQ7xxaf8bIx4cs6jWiF7IfBw/edit#heading=h.hnwatklyy346"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <span className={styles.link}>Code Samples</span>
+                </a>
+                <a
+                    href="https://github.com/ZacharyRener"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <span className={styles.link}>GitHub</span>
+                </a>
+
+                <span>
+                    <a
                         href="https://us18.list-manage.com/contact-form?u=c3aee447c73a5506280ee1d82&form_id=037fdd1db95dae27e6e70b47841aa70b"
                         target="_blank"
                     >
-                        <a className={styles.mobileLink + " " + styles.cta}>
+                        <span
+                            className={styles.link + " button version-accent"}
+                        >
                             Contact
-                        </a>
-                    </Link>
-                </div>
+                        </span>
+                    </a>
+                </span>
+            </>
+        );
+    };
+
+    return (
+        <div>
+            <section className={"mobileMenu" + " " + mobileMenuClass}>
+                <div className={styles.mobileLinkWrapper}>{navbarLinks()}</div>
             </section>
             <section className={styles.navbar + " " + scrolled}>
                 <nav className={styles.navbarWrapper + " "}>
@@ -68,44 +83,7 @@ export default function Navbar() {
                             </div>
                         </div>
                         <div className={styles.right}>
-                            <a
-                                href="https://docs.google.com/document/d/1TIZ4wakhXfRBrbQAm_x_dapY2KwqyK7dH9bMZ-bk4Nw/edit?usp=sharing"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <span className={styles.link}>Resume</span>
-                            </a>
-                            <a
-                                href="https://docs.google.com/document/d/1F7Xmob4Jh8ImSJ9EataWQ7xxaf8bIx4cs6jWiF7IfBw/edit#heading=h.hnwatklyy346"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <span className={styles.link}>
-                                    Code Samples
-                                </span>
-                            </a>
-                            <a
-                                href="https://github.com/ZacharyRener"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <span className={styles.link}>GitHub</span>
-                            </a>
-
-                            <span>
-                                <a
-                                    href="https://us18.list-manage.com/contact-form?u=c3aee447c73a5506280ee1d82&form_id=037fdd1db95dae27e6e70b47841aa70b"
-                                    target="_blank"
-                                >
-                                    <span
-                                        className={
-                                            styles.link + " " + styles.cta
-                                        }
-                                    >
-                                        Contact
-                                    </span>
-                                </a>
-                            </span>
+                            {navbarLinks()}
                             <div
                                 className={
                                     styles.hamburgerWrapper +
@@ -114,7 +92,18 @@ export default function Navbar() {
                                 }
                                 onClick={toggleMobileMenu}
                             >
-                                <div className={styles.hamburger}></div>
+                                {/* <div className={styles.hamburger}></div> */}
+                                <button
+                                    className={`hamburger hamburger--spin ${
+                                        isActive ? "is-active" : ""
+                                    }`}
+                                    type="button"
+                                    onClick={() => setIsActive(!isActive)}
+                                >
+                                    <span className="hamburger-box">
+                                        <span className="hamburger-inner"></span>
+                                    </span>
+                                </button>
                             </div>
                         </div>
                     </div>

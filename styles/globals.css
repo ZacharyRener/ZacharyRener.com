@@ -175,7 +175,7 @@ form::before {
         position: relative;
         top: -20px;
     }
-    #mainstage div:not(.guideLabel) {
+    #mainstage div:not(.guideLabel):not([uk-scrollspy]) {
         font-size: 36px;
         line-height: normal;
         letter-spacing: normal;

@@ -105,7 +105,7 @@ export default function SingleProject() {
                     }
                 >
                     <div className="inner">
-                        <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:0; repeat: false;">
+                        <div uk-scrollspy="target: *:not(li):not(strong):not(div); cls:uk-animation-fade uk-animation-slide-bottom-small zr-animation;delay:50; repeat: false;">
                             <h1>{title}</h1>
                             <div
                                 dangerouslySetInnerHTML={{ __html: content }}
@@ -118,6 +118,7 @@ export default function SingleProject() {
                     <div className="p-inner">
                         <div
                             className="main-sidebar"
+                            uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small zr-animation;delay:50; repeat: false;"
                             dangerouslySetInnerHTML={{ __html: sidebarContent }}
                         ></div>
                         <div className="main-content">

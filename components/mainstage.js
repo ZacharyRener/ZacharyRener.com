@@ -13,32 +13,37 @@ export default function Mainstage() {
                     <section className={styles.content}>
                         <div>
                             <h1>
-                                <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:0; repeat: false;">
+                                <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small zr-animation;delay:0; repeat: false;">
                                     I'm Zach,
                                 </div>
-                                <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:50; repeat: false;">
+                                <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small zr-animation;delay:50; repeat: false;">
                                     an Independent
                                 </div>
-                                <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small;delay:100; repeat: false;">
+                                <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small zr-animation;delay:100; repeat: false;">
                                     Web Developer.
                                 </div>
                             </h1>
                             <div class="guideLabel">
-                                <a
-                                    class="button version-accent"
-                                    href="https://docs.google.com/document/d/1F7Xmob4Jh8ImSJ9EataWQ7xxaf8bIx4cs6jWiF7IfBw/edit#heading=h.hnwatklyy346"
-                                    target="_blank"
+                                <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small zr-animation;delay:150; repeat: false;">
+                                    <a
+                                        class="button version-accent"
+                                        href="https://docs.google.com/document/d/1F7Xmob4Jh8ImSJ9EataWQ7xxaf8bIx4cs6jWiF7IfBw/edit#heading=h.hnwatklyy346"
+                                        target="_blank"
+                                    >
+                                        Code Samples
+                                    </a>
+                                    <a
+                                        class="button"
+                                        target="_blank"
+                                        href="https://docs.google.com/document/d/1TIZ4wakhXfRBrbQAm_x_dapY2KwqyK7dH9bMZ-bk4Nw/edit?usp=sharing"
+                                    >
+                                        View Resume
+                                    </a>
+                                </div>
+                                <div
+                                    class="guideLabel"
+                                    uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small zr-animation;delay:200; repeat: false;"
                                 >
-                                    Code Samples
-                                </a>
-                                <a
-                                    class="button"
-                                    target="_blank"
-                                    href="https://docs.google.com/document/d/1TIZ4wakhXfRBrbQAm_x_dapY2KwqyK7dH9bMZ-bk4Nw/edit?usp=sharing"
-                                >
-                                    View Resume
-                                </a>
-                                <div class="guideLabel">
                                     check out my recent full-builds:
                                 </div>
                             </div>

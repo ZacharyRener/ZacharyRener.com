@@ -1,7 +1,7 @@
 import Header from "../../../components/header";
 import Footer from "../../../components/footer";
 import Navbar from "../../../components/navbar";
-import { fetchPageData } from "../../lib/fetchPageContent";
+import { fetchPageData } from "../../../lib/fetchPageContent";
 import { useEffect } from "react";
 
 /**

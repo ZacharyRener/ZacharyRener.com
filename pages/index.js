@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { fetchPageData } from "./lib/fetchPageContent.js";
+import { fetchPageData } from "../lib/fetchPageContent";
 import styles from "../styles/Home.module.css";
 import Head from "../components/header.js";
 import Footer from "../components/footer";

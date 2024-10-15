@@ -57,7 +57,17 @@ export default function FeaturedProject(props) {
     };
 
     const imagePartSimple = () => {
-        return <img className={styles.projectImage} src={props.image} />;
+        const imagePart = () => {
+            return <img className={styles.projectImage} src={props.image} />;
+        };
+        if (props.hasOwnProperty("link")) {
+            return (
+                <div>
+                    <Link href={props.link}>{imagePart()}</Link>
+                </div>
+            );
+        }
+        return <div>{imagePart()}</div>;
     };
 
     const imagePart = () => {

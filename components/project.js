@@ -167,11 +167,17 @@ export default function Project(props) {
     };
 
     const imagePartSimple = () => {
-        return (
-            <div>
-                <img className={styles.projectImage} src={props.image} />
-            </div>
-        );
+        const imagePart = () => {
+            return <img className={styles.projectImage} src={props.image} />;
+        };
+        if (props.hasOwnProperty("link")) {
+            return (
+                <div>
+                    <Link href={props.link}>{imagePart()}</Link>
+                </div>
+            );
+        }
+        return <div>{imagePart()}</div>;
     };
 
     const excerpt = () => {

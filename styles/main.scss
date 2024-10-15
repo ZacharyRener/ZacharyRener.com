@@ -101,6 +101,7 @@ body.home {
         [class*="projectWrapper"] img {
             max-height: unset;
             min-height: 925px;
+            cursor: pointer;
         }
     }
     [class*="FeaturedProject_imageWrapper"] {
@@ -939,4 +940,5 @@ body.hidden {
 
 body.home [class*="projectImage"] {
     height: 400px;
+    cursor: pointer;
 }

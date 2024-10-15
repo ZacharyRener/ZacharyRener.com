@@ -126,7 +126,10 @@ const Layout = ({ pageData }) => {
 
     // Render the content
     return (
-        <div class="layout_root">
+        <div
+            class="layout_root"
+            uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small zr-animation;delay:0; repeat: false;"
+        >
             {contentData.map((block, index) => {
                 switch (block.type) {
                     case "project_showcase":

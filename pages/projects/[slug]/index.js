@@ -12,6 +12,7 @@ import Link from "next/link";
 import data from "../../../data/projects";
 import ProjectShowcase from "../../../components/projectShowcase.js";
 import Layout from "../../../components/_layout.js";
+import do_shortcode from "../../../components/shortcode.js";
 
 /**
  * Fetches data on the server side from the headless WordPress.
@@ -76,10 +77,12 @@ export default function SingleProject({ pageData }) {
                 <Navbar />
                 <section className="container bodyCopy">
                     <div className="inner">
-                        <div uk-scrollspy="target: *:not(li):not(strong):not(div); cls:uk-animation-fade uk-animation-slide-bottom-small zr-animation; delay:50; repeat: false;">
+                        <div uk-scrollspy="target: > *; cls:uk-animation-fade uk-animation-slide-bottom-small zr-animation;delay:50; repeat: false;">
                             <h1>{title}</h1>
                             <div
-                                dangerouslySetInnerHTML={{ __html: content }}
+                                dangerouslySetInnerHTML={{
+                                    __html: do_shortcode(content),
+                                }}
                             ></div>
                         </div>
                     </div>

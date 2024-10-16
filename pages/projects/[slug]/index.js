@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { fetchPageData } from "../../lib/fetchPageContent";
+import { fetchPageData } from "../../../lib/fetchPageContent";
 import subpageStyles from "../../../styles/Subpage.module.css";
 import styles from "../../../styles/SingleProject.module.css";
 import { useEffect, useState } from "react";

@@ -22,7 +22,6 @@ export default function Mainstage() {
                                 <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small zr-animation;delay:100; repeat: false;">
                                     Web Developer.
                                 </div>
-                                <em>Staging Enabled</em>
                             </h1>
                             <div class="guideLabel">
                                 <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small zr-animation;delay:150; repeat: false;">

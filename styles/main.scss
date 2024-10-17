@@ -962,3 +962,20 @@ body.home [class*="projectImage"] {
         }
     }
 }
+
+.alert-bar {
+    background: #d91f41;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 16px;
+    a {
+        color: white;
+        text-decoration: underline;
+    }
+}
+
+[class*="FeaturedProject_imageWrapper"] > div {
+    width: 100%;
+    max-width: 1122px;
+}

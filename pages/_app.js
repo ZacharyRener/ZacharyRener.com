@@ -6,7 +6,7 @@ import NProgress from "nprogress";
 import "nprogress/nprogress.css";
 import { useState, useEffect } from "react";
 
-const isMaintenanceMode = true;
+const isMaintenanceMode = false;
 
 Router.events.on("routeChangeStart", () => {
     NProgress.start();

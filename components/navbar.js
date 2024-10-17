@@ -1,9 +1,12 @@
 import globals from "../styles/Global.module.css";
 import styles from "../styles/Navbar.module.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Link from "next/link";
+import { GlobalContext } from "../context/GlobalContext";
+import AdminBar from "./admin-bar";
 
 export default function Navbar() {
+    const { postID } = useContext(GlobalContext);
     const [scrolled, setScrolled] = useState("");
     const [mobileMenuClass, setMobileMenuClass] = useState("");
     const [isActive, setIsActive] = useState(false);
@@ -73,6 +76,10 @@ export default function Navbar() {
                 <div className={styles.mobileLinkWrapper}>{navbarLinks()}</div>
             </section>
             <section className={styles.navbar + " " + scrolled}>
+                {process.env.NEXT_PUBLIC_STAGING_ENABLED === "true" && (
+                    <div className="alert-bar">Staging Site</div>
+                )}
+                {process.env.NEXT_PUBLIC_STAGING_ENABLED && <AdminBar />}
                 <nav className={styles.navbarWrapper + " "}>
                     <div className={styles.wrapper}>
                         <div className={styles.left}>

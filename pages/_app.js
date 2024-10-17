@@ -26,8 +26,8 @@ function MyApp({ Component, pageProps }) {
         return (
             <div className="maintenance">
                 <p>
-                    Briefly unavailable for scheduled maintenance. Check back an
-                    hour or so.
+                    Briefly unavailable for scheduled maintenance. Check back in
+                    an hour or so.
                 </p>
                 <ul>
                     <li>

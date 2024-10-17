@@ -4,7 +4,7 @@ import "../styles/main.scss";
 import Router from "next/router";
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const isMaintenanceMode = true;
 
@@ -21,8 +21,16 @@ Router.events.on("routeChangeError", () => {
 });
 
 function MyApp({ Component, pageProps }) {
-    useEffect(() => {}, []);
-    if (isMaintenanceMode) {
+    const [hasUserOverride, setHasUserOverride] = useState(false);
+
+    useEffect(() => {
+        // This code runs only on the client side
+        if (window.location.search.includes("override=true")) {
+            setHasUserOverride(true);
+        }
+    }, []);
+
+    if (isMaintenanceMode && !hasUserOverride) {
         return (
             <div className="maintenance">
                 <p>
@@ -66,6 +74,7 @@ function MyApp({ Component, pageProps }) {
             </div>
         );
     }
+
     return <Component {...pageProps} />;
 }
 

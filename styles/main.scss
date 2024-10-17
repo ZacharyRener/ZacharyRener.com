@@ -976,6 +976,6 @@ body.home [class*="projectImage"] {
 }
 
 [class*="FeaturedProject_imageWrapper"] > div {
-    width: 100%;
+    width: 100% !important;
     max-width: 1122px;
 }

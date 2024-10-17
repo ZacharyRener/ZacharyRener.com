@@ -966,13 +966,20 @@ body.home [class*="projectImage"] {
 .alert-bar {
     background: #d91f41;
     color: white;
-    padding: 10px 0;
+    // padding: 10px 0;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     font-size: 16px;
     a {
         color: white;
         text-decoration: underline;
     }
+    font-size: 13px;
+    font-family: -apple-system, "system-ui", "Segoe UI", Roboto, Oxygen-Sans,
+        Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 [class*="FeaturedProject_imageWrapper"] > div {

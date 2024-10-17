@@ -74,7 +74,7 @@ export default function Navbar() {
             </section>
             <section className={styles.navbar + " " + scrolled}>
                 {process.env.NEXT_PUBLIC_STAGING_ENABLED === "true" && (
-                    <div className="alert-bar">Staging Enabled</div>
+                    <div className="alert-bar">Staging Site</div>
                 )}
                 <nav className={styles.navbarWrapper + " "}>
                     <div className={styles.wrapper}>

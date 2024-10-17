@@ -1,1 +1,1 @@
-nextjs frontend of headless wordpress personal website
+nextjs frontend for headless wordpress personal website

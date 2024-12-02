@@ -9,7 +9,17 @@ module.exports = {
       },
 	  {
         source: '/resume',
+        destination: 'https://docs.google.com/document/d/1H08kIYpkTfxcqDzgrUprFfa4UZgb8rgYmWXFpO1wQjY/edit?usp=sharing',
+        permanent: true, 
+      },
+	  {
+        source: '/resume/wordpress',
         destination: 'https://docs.google.com/document/d/1TIZ4wakhXfRBrbQAm_x_dapY2KwqyK7dH9bMZ-bk4Nw/edit?usp=sharing',
+        permanent: true, 
+      },
+	  {
+        source: '/resume/frontend',
+        destination: 'https://docs.google.com/document/d/1H08kIYpkTfxcqDzgrUprFfa4UZgb8rgYmWXFpO1wQjY/edit?usp=sharing',
         permanent: true, 
       },
     ];

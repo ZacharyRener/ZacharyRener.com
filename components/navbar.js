@@ -76,9 +76,9 @@ export default function Navbar() {
                 <div className={styles.mobileLinkWrapper}>{navbarLinks()}</div>
             </section>
             <section className={styles.navbar + " " + scrolled}>
-                {process.env.NEXT_PUBLIC_STAGING_ENABLED === "true" && (
+                {/* {process.env.NEXT_PUBLIC_STAGING_ENABLED === "true" && (
                     <div className="alert-bar">Staging Site</div>
-                )}
+                )} */}
                 {process.env.NEXT_PUBLIC_STAGING_ENABLED && <AdminBar />}
                 <nav className={styles.navbarWrapper + " "}>
                     <div className={styles.wrapper}>

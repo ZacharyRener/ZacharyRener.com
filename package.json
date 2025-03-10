@@ -13,6 +13,7 @@
         "formik": "^2.2.9",
         "hamburgers": "^1.2.1",
         "next": "11.1.0",
+        "next-password-protect": "^1.8.0",
         "nprogress": "^0.2.0",
         "react": "17.0.2",
         "react-compare-slider": "^2.2.0",

@@ -90,7 +90,7 @@ export default function Home({ pageData, projectsData = [] }) {
                 }),
             };
 
-            if (index === 0) {
+            if (index === 0 || index === projectsData.length - 1) {
                 // The first project is featured
                 return <FeaturedProject {...projectProps} />;
             } else {

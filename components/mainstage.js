@@ -17,7 +17,7 @@ export default function Mainstage() {
                                     I'm Zach,
                                 </div>
                                 <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small zr-animation;delay:50; repeat: false;">
-                                    an Independent
+                                    A Fullstack
                                 </div>
                                 <div uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small zr-animation;delay:100; repeat: false;">
                                     Web Developer.
@@ -44,7 +44,7 @@ export default function Mainstage() {
                                     class="guideLabel"
                                     uk-scrollspy="cls:uk-animation-fade uk-animation-slide-bottom-small zr-animation;delay:200; repeat: false;"
                                 >
-                                    check out my recent full-builds:
+                                    check out my featured projects:
                                 </div>
                             </div>
                             {/* <p

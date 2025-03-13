@@ -19,7 +19,7 @@ module.exports = {
       },
 	  {
         source: '/resume/wordpress',
-        destination: 'https://wp.zacharyrener.com/wp-content/uploads/2025/03/ZachRener_Resume_3_12_25_Latest.pdf',
+        destination: 'https://wp.zacharyrener.com/wp-content/uploads/2025/03/ZachRener_Resume_3_12_25_01.pdf',
         permanent: true, 
       },
 	  {

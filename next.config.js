@@ -14,7 +14,7 @@ module.exports = {
       },
 	  {
         source: '/resume',
-        destination: 'https://docs.google.com/document/d/1H08kIYpkTfxcqDzgrUprFfa4UZgb8rgYmWXFpO1wQjY/edit?usp=sharing',
+        destination: 'https://wp.zacharyrener.com/wp-content/uploads/2025/03/ZachRener_Resume_3_12_25_01.pdf',
         permanent: true, 
       },
 	  {

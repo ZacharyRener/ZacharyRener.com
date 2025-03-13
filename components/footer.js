@@ -19,7 +19,7 @@ export default function Footer() {
                         </Link>
                         &nbsp;&nbsp;&nbsp;&nbsp;
                         <Link
-                            href="https://wp.zacharyrener.com/wp-content/uploads/2025/03/ZachRener_Resume_3_12_25_Latest.pdf"
+                            href="https://wp.zacharyrener.com/wp-content/uploads/2025/03/ZachRener_Resume_3_12_25_01.pdf"
                             target="_blank"
                         >
                             <a className={styles.mobileLink}>Resume</a>

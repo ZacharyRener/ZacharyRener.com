@@ -33,7 +33,7 @@ export default function Navbar() {
         return (
             <>
                 <a
-                    href="https://docs.google.com/document/d/1TIZ4wakhXfRBrbQAm_x_dapY2KwqyK7dH9bMZ-bk4Nw/edit?usp=sharing"
+                    href="https://wp.zacharyrener.com/wp-content/uploads/2025/03/ZachRener_Resume_3_12_25_Latest.pdf"
                     target="_blank"
                     rel="noreferrer"
                 >
@@ -79,7 +79,7 @@ export default function Navbar() {
                 {/* {process.env.NEXT_PUBLIC_STAGING_ENABLED === "true" && (
                     <div className="alert-bar">Staging Site</div>
                 )} */}
-                {process.env.NEXT_PUBLIC_STAGING_ENABLED && <AdminBar />}
+                {/* {process.env.NEXT_PUBLIC_STAGING_ENABLED && <AdminBar />} */}
                 <nav className={styles.navbarWrapper + " "}>
                     <div className={styles.wrapper}>
                         <div className={styles.left}>
